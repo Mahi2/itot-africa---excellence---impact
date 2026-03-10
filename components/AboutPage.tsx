@@ -17,28 +17,34 @@ import {
 const AboutPage: React.FC = () => {
   const teamMembers = [
     {
-      name: "Direction Générale",
+      name: "Serge Kishiko",
       role: "Stratégie & Vision",
       desc: "Pilotage de la vision globale et alignement stratégique avec les partenaires institutionnels.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&h=200&auto=format&fit=crop"
+      image: "https://media.licdn.com/dms/image/v2/D4D03AQFmiuKC6w6MVg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1669546343900?e=1774483200&v=beta&t=7oaIKBL5sJ5_PYH852jDWkTkeECpBlESfp5oS3YuCLU"
     },
     {
-      name: "Direction des Opérations",
+      name: "Henrique Mukanda",
       role: "Exécution & Terrain",
       desc: "Coordination des interventions multisites et garantie de la livraison opérationnelle des projets.",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&h=200&auto=format&fit=crop"
+      image: "https://media.licdn.com/dms/image/v2/D4D03AQG4wBRrjYP0jA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1719146833722?e=1774483200&v=beta&t=8zGD2Cf2a6WWvWiUDV1OHGzceFI22kIo2TFPS9mN2aY"
     },
     {
-      name: "Direction Technique",
-      role: "Ingénierie & Architecture",
+      name: "Yann Mulonda",
+      role: "Ingénierie & Innovation",
       desc: "Supervision des standards de développement et de la robustesse des infrastructures digitales.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&h=200&auto=format&fit=crop"
+      image: "https://media.licdn.com/dms/image/v2/D5603AQEQ_X09IF7EyQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1724510816750?e=1774483200&v=beta&t=Xjv3NhkiVK1sxZC_0Aq0FdAVlX5zgotMjYcnptQCrd0"
     },
     {
-      name: "Responsable Formation",
-      role: "Capital Humain (Okademy)",
-      desc: "Conception des programmes d'excellence et suivi de l'employabilité des cohortes de talents.",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&h=200&auto=format&fit=crop"
+      name: "Grace Kaseya",
+      role: "Responsable Commercial",
+      desc: "Développement commercial & veille de l'objectif 'impact social' ",
+      image: "https://media.licdn.com/dms/image/v2/D4E03AQFsgDS-KAndFA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1696010546038?e=1774483200&v=beta&t=JcqvXzwkH3IGrSn_umtzW_ETeUBv1tIgj3Gi4w-g6Wc"
+    },
+    {
+      name: "Netka Kasonga",
+      role: "Assistante Administrative",
+      desc: "Responsable de toutes les questions administratives de Itot Africa",
+      image: "https://media.licdn.com/dms/image/v2/D4D03AQEHTOUAFmHq4g/profile-displayphoto-shrink_800_800/B4DZburNQWGwAg-/0/1747761027987?e=1774483200&v=beta&t=o_8ggCG8gRF82LxSStDHk-oBg2BjcWJ69yioUAyJCQA"
     }
   ];
 
@@ -49,7 +55,7 @@ const AboutPage: React.FC = () => {
         {/* Background Image Layer */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2084&auto=format&fit=crop" 
+            src="https://images.unsplash.com/photo-1773139915010-0897013ccafe?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
             alt="Collaboration and strategy" 
             className="w-full h-full object-cover"
           />
@@ -181,25 +187,38 @@ const AboutPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+          <div className="flex flex-wrap justify-center gap-x-12 gap-y-20">
             {teamMembers.map((member, i) => (
-              <div key={i} className="group flex flex-col items-center md:items-start text-center md:text-left">
-                <div className="relative mb-8 group">
-                   <div className="absolute inset-0 bg-itot-teal rounded-3xl rotate-6 group-hover:rotate-12 transition-transform duration-500 opacity-10"></div>
-                   <img 
-                    src={member.image} 
-                    alt={member.name}
-                    className="relative w-40 h-40 object-cover rounded-3xl grayscale group-hover:grayscale-0 transition-all duration-700 shadow-xl"
-                   />
-                   <div className="absolute -bottom-4 -right-4 w-12 h-12 bg-white rounded-2xl shadow-lg flex items-center justify-center text-itot-teal opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all cursor-pointer">
-                      <Linkedin size={20} />
+              <div key={i} className="group flex flex-col items-center text-center w-full sm:w-[calc(50%-24px)] lg:w-[calc(33.333%-32px)] xl:w-[calc(25%-36px)] max-w-[300px]">
+                <div className="relative mb-10 group">
+                   {/* Decorative background element */}
+                   <div className="absolute inset-0 bg-itot-teal rounded-[2.5rem] rotate-6 group-hover:rotate-12 transition-transform duration-700 opacity-10"></div>
+                   <div className="absolute inset-0 bg-slate-100 rounded-[2.5rem] -rotate-3 group-hover:-rotate-6 transition-transform duration-700 opacity-50"></div>
+                   
+                   <div className="relative w-48 h-48 overflow-hidden rounded-[2.5rem] shadow-2xl">
+                     <img 
+                      src={member.image} 
+                      alt={member.name}
+                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700"
+                     />
+                     {/* Overlay on hover */}
+                     <div className="absolute inset-0 bg-itot-teal/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                   </div>
+
+                   <div className="absolute -bottom-4 -right-4 w-14 h-14 bg-white rounded-2xl shadow-xl flex items-center justify-center text-itot-teal opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 cursor-pointer hover:bg-itot-teal hover:text-white">
+                      <Linkedin size={22} />
                    </div>
                 </div>
-                <h3 className="text-xl font-black text-slate-900 mb-1">{member.name}</h3>
-                <div className="text-itot-teal font-bold text-xs uppercase tracking-widest mb-4">{member.role}</div>
-                <p className="text-slate-500 text-sm leading-relaxed max-w-[240px]">
-                  {member.desc}
-                </p>
+                
+                <div className="space-y-2">
+                  <h3 className="text-2xl font-black text-slate-900 tracking-tight">{member.name}</h3>
+                  <div className="inline-block px-3 py-1 rounded-full bg-teal-50 text-itot-teal font-bold text-[10px] uppercase tracking-widest">
+                    {member.role}
+                  </div>
+                  <p className="text-slate-500 text-sm leading-relaxed mt-4 font-light">
+                    {member.desc}
+                  </p>
+                </div>
               </div>
             ))}
           </div>

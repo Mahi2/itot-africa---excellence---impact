@@ -28,7 +28,7 @@ const SolutionsPage: React.FC<SolutionsPageProps> = ({ onNavigate }) => {
       <section className="relative pt-32 pb-20 px-6 bg-slate-900 overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20">
           <img 
-            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop" 
+            src="https://images.unsplash.com/photo-1773139915055-67bb7d88502d?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
             className="w-full h-full object-cover" 
             alt="Solutions Background" 
           />
@@ -80,7 +80,7 @@ const SolutionsPage: React.FC<SolutionsPageProps> = ({ onNavigate }) => {
                 <div className="absolute -inset-4 bg-itot-teal/10 rounded-[40px] blur-2xl group-hover:bg-itot-teal/15 transition-all"></div>
                 <div className="relative bg-white rounded-[32px] shadow-2xl border border-slate-100 p-2 overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2070&auto=format&fit=crop" 
+                    src="https://okademy.africa/uploads/system/35c5ce55d4c6015406e3f53558e5bed2.jpg" 
                     alt="Okademy Interface Mockup" 
                     className="w-full h-auto rounded-[24px] shadow-inner"
                   />
@@ -180,7 +180,7 @@ const SolutionsPage: React.FC<SolutionsPageProps> = ({ onNavigate }) => {
             <div className="lg:w-1/2">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070&auto=format&fit=crop" 
+                  src="https://images.unsplash.com/photo-1773139914982-99db20d6b163?q=80&w=1086&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
                   alt="Students learning" 
                   className="w-full aspect-square lg:aspect-auto lg:h-[600px] object-cover"
                 />
@@ -233,12 +233,12 @@ const SolutionsPage: React.FC<SolutionsPageProps> = ({ onNavigate }) => {
             <div className="lg:w-1/2 w-full">
               <div className="grid grid-cols-2 gap-4">
                 <img 
-                  src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070&auto=format&fit=crop" 
+                  src="https://images.unsplash.com/photo-1773139915055-67bb7d88502d?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
                   alt="Implementation Team" 
                   className="rounded-2xl h-64 w-full object-cover shadow-lg"
                 />
                 <img 
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop" 
+                  src="https://images.unsplash.com/photo-1773141567489-e8173a944d69?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
                   alt="Hardware integration" 
                   className="rounded-2xl h-80 w-full object-cover shadow-lg mt-8"
                 />

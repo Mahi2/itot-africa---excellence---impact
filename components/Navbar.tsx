@@ -36,11 +36,8 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
           className="flex items-center gap-2 cursor-pointer" 
           onClick={(e) => handleLinkClick('home', e)}
         >
-          <div className="w-10 h-10 bg-itot-teal rounded-full flex items-center justify-center overflow-hidden">
-             <span className="text-white font-bold text-xl">C</span>
-          </div>
           <span className={`text-2xl font-black tracking-tight ${isScrolled ? 'text-itot-teal' : 'text-white'}`}>
-            itot<span className="font-light italic">africa</span>
+            Itot <span className="font-light">africa</span>
           </span>
         </div>
 

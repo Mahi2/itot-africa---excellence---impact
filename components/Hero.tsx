@@ -12,14 +12,15 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://storage.googleapis.com/static.run.app/v1/projects/ais-dev-opwquycodwty5d63opxchz-443270475435/assets/1.png" 
+          src="https://images.unsplash.com/photo-1773139786673-d363971d5cca?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
           alt="Itot Africa Talents" 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover blur-[1px]"
           referrerPolicy="no-referrer"
         />
-        {/* Creative overlay: deep gradient for readability on the left, with a touch of itot-teal and subtle blur */}
-        <div className="absolute inset-0 bg-gradient-to-r from-teal-950/80 via-teal-950/20 to-transparent"></div>
-        <div className="absolute inset-y-0 left-0 w-full md:w-1/2 bg-gradient-to-r from-itot-teal/5 to-transparent backdrop-blur-[1.5px]"></div>
+        {/* Creative overlay: deep gradient for readability on the left, with a touch of itot-teal and seamless faded blur */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/60 to-transparent z-10"></div>
+        <div className="absolute inset-0 backdrop-blur-[8px] [mask-image:linear-gradient(to_right,black_20%,transparent_60%)] z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-itot-teal/10 via-transparent to-transparent z-10"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 w-full py-20">
@@ -32,11 +33,11 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
             Bâtir le capital humain de l'Afrique digitale
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
+          <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6 drop-shadow-2xl">
             De la formation certifiante à <span className="text-itot-teal bg-white px-2 inline-block">l'emploi concret.</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-white/80 font-light mb-10 leading-relaxed max-w-2xl">
+          <p className="text-xl md:text-2xl text-white font-medium mb-10 leading-relaxed max-w-2xl drop-shadow-md">
             Itot Africa est l'écosystème qui relie les talents, les entreprises et les institutions aux compétences réelles et aux opportunités durables de croissance.
           </p>
 

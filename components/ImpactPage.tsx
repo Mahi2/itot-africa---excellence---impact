@@ -79,10 +79,10 @@ const ImpactPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { label: "Talents formés", value: "15,000+", icon: <Users />, color: "bg-teal-50 text-itot-teal" },
-              { label: "Taux d'insertion", value: "90%", icon: <Target />, color: "bg-blue-50 text-blue-600" },
-              { label: "Entreprises partenaires", value: "500+", icon: <Briefcase />, color: "bg-purple-50 text-purple-600" },
-              { label: "Projets délivrés", value: "1,200+", icon: <Globe2 />, color: "bg-amber-50 text-amber-600" }
+              { label: "Talents formés", value: "10,700+", icon: <Users />, color: "bg-teal-50 text-itot-teal" },
+              { label: "Taux d'insertion", value: "47%", icon: <Target />, color: "bg-blue-50 text-blue-600" },
+              { label: "Entreprises partenaires", value: "10+", icon: <Briefcase />, color: "bg-purple-50 text-purple-600" },
+              { label: "Projets délivrés", value: "92+", icon: <Globe2 />, color: "bg-amber-50 text-amber-600" }
             ].map((stat, i) => (
               <div key={i} className="bg-white p-8 rounded-[32px] shadow-xl shadow-slate-200/50 border border-slate-50 flex flex-col items-center text-center group hover:-translate-y-2 transition-all duration-300">
                 <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 ${stat.color} group-hover:scale-110 transition-transform`}>
@@ -116,18 +116,18 @@ const ImpactPage: React.FC = () => {
             <div className="bg-white rounded-[40px] overflow-hidden shadow-sm border border-slate-100 group">
               <div className="h-64 overflow-hidden relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1551288049-bbbda5366392?q=80&w=2070&auto=format&fit=crop" 
-                  alt="Fintech transformation" 
+                  src="https://images.unsplash.com/photo-1773146826449-a77f7138c840?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                  alt="Digitalisation écoles" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute top-6 left-6 px-4 py-2 bg-white/90 backdrop-blur-sm rounded-full text-xs font-bold uppercase tracking-widest text-itot-teal">
-                  Transformation Digitale
+                  Transformation Digitale des écoles
                 </div>
               </div>
               <div className="p-10">
-                <h3 className="text-2xl font-bold text-slate-900 mb-4">Numérisation d'une institution financière majeure.</h3>
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">Digitalisation de deux écoles locales avec Ecobank</h3>
                 <p className="text-slate-600 mb-8 leading-relaxed">
-                  Accompagnement de bout en bout pour la migration vers le cloud et le développement d'une application mobile servant plus de 200,000 utilisateurs.
+                  Partenariat éducatif pour l’intégration du numérique et de l’intelligence artificielle dans les écoles, avec formation des enseignants, ateliers pour les élèves et mise en place d’infrastructures informatiques et bibliothèques numériques.
                 </p>
                 <div className="flex items-center gap-4 py-4 border-t border-slate-50">
                    <BarChart3 className="text-itot-teal" />
@@ -139,7 +139,7 @@ const ImpactPage: React.FC = () => {
             <div className="bg-white rounded-[40px] overflow-hidden shadow-sm border border-slate-100 group">
               <div className="h-64 overflow-hidden relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070&auto=format&fit=crop" 
+                  src="https://images.unsplash.com/photo-1773142268363-d9b3f06c8741?q=80&w=1547&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
                   alt="Education impact" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
@@ -148,9 +148,9 @@ const ImpactPage: React.FC = () => {
                 </div>
               </div>
               <div className="p-10">
-                <h3 className="text-2xl font-bold text-slate-900 mb-4">Programme National de Formation "Skills 2030".</h3>
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">Programmes de formation "JED & FED".</h3>
                 <p className="text-slate-600 mb-8 leading-relaxed">
-                  Déploiement d'une infrastructure e-learning pour former 5,000 jeunes aux métiers du code dans des zones reculées de la RDC.
+                  Déploiement de plusieurs programmes de formations dont : "Jeune Auto-Entrepreneur & Femmes Micro-Entrepreneur", afin de booster les entreprises ou projets grâce au outils digitaux
                 </p>
                 <div className="flex items-center gap-4 py-4 border-t border-slate-50">
                    <CheckCircle className="text-blue-600" />
@@ -163,59 +163,6 @@ const ImpactPage: React.FC = () => {
       </section>
 
       {/* 4. ACTUALITÉS & ÉVÉNEMENTS (NOUVELLE SECTION) */}
-      <section className="py-32 px-6 bg-white overflow-hidden relative">
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6">Actualités & Événements</h2>
-            <p className="text-lg text-slate-500 leading-relaxed">
-              Suivez notre impact au quotidien, nos derniers succès de projets et participez à nos prochaines initiatives pour l'écosystème.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {newsItems.map((item, i) => (
-              <div key={i} className="group bg-white rounded-[40px] border border-slate-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col h-full overflow-hidden">
-                <div className="h-56 overflow-hidden relative">
-                  <img 
-                    src={item.image} 
-                    alt={item.title} 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
-                  <div className={`absolute top-6 left-6 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest ${item.color} shadow-sm backdrop-blur-md`}>
-                    {item.type}
-                  </div>
-                </div>
-                
-                <div className="p-8 flex flex-col flex-grow">
-                  <div className="flex items-center gap-2 text-slate-400 text-xs font-semibold mb-4 uppercase tracking-tighter">
-                    {item.type === "Événement" ? <Clock size={14} className="text-itot-teal" /> : <Calendar size={14} className="text-itot-teal" />}
-                    {item.date}
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-slate-900 mb-4 group-hover:text-itot-teal transition-colors leading-tight">
-                    {item.title}
-                  </h3>
-                  
-                  <p className="text-slate-500 text-sm leading-relaxed mb-8 flex-grow">
-                    {item.description}
-                  </p>
-                  
-                  <button className="flex items-center gap-2 text-sm font-black text-slate-900 group-hover:gap-3 transition-all">
-                    {item.linkText}
-                    <ArrowRight size={16} className="text-itot-teal" />
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-20 text-center">
-             <button className="px-10 py-4 bg-slate-900 text-white font-bold rounded-2xl hover:bg-itot-teal transition-all shadow-xl shadow-slate-200">
-               Consulter toutes les actualités
-             </button>
-          </div>
-        </div>
-      </section>
 
       {/* 5. NOS PARTENAIRES SECTION */}
       <section className="py-24 px-6 bg-slate-50">
@@ -225,11 +172,35 @@ const ImpactPage: React.FC = () => {
             <p className="text-slate-500">Des institutions internationales, gouvernements et leaders de l'industrie.</p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-12 items-center opacity-60">
-             {[1,2,3,4,5,6].map(i => (
-               <div key={i} className="flex justify-center grayscale hover:grayscale-0 transition-all cursor-pointer">
-                  <div className="h-12 w-32 bg-white rounded-lg flex items-center justify-center font-bold text-slate-400 border border-slate-100 uppercase tracking-widest text-[10px]">
-                     Partenaire {i}
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-12 items-center">
+             {[
+               { name: "Enabel", logo: "https://logo.clearbit.com/enabel.be" },
+               { name: "GIZ", logo: "https://logo.clearbit.com/giz.de" },
+               { name: "Ecobank", logo: "https://logo.clearbit.com/ecobank.com" },
+               { name: "Rawbank", logo: "https://logo.clearbit.com/rawbank.com" },
+               { name: "FEC", logo: "https://logo.clearbit.com/fec-rdc.com" },
+               { name: "PNUD", logo: "https://logo.clearbit.com/undp.org" }
+             ].map((partner, i) => (
+               <div key={i} className="flex justify-center transition-all cursor-pointer group">
+                  <div className="h-24 w-full bg-white rounded-2xl flex items-center justify-center p-6 border border-slate-100 shadow-sm group-hover:shadow-md group-hover:-translate-y-1 transition-all">
+                     <img 
+                       src={partner.logo} 
+                       alt={partner.name} 
+                       className="max-h-full max-w-full object-contain opacity-70 group-hover:opacity-100 transition-opacity"
+                       referrerPolicy="no-referrer"
+                       onError={(e) => {
+                         // Fallback to a text-based logo if the image fails to load
+                         const target = e.target as HTMLImageElement;
+                         target.style.display = 'none';
+                         const parent = target.parentElement;
+                         if (parent) {
+                           const span = document.createElement('span');
+                           span.className = 'text-slate-400 font-bold text-xs uppercase tracking-widest';
+                           span.innerText = partner.name;
+                           parent.appendChild(span);
+                         }
+                       }}
+                     />
                   </div>
                </div>
              ))}
