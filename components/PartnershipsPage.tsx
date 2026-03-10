@@ -22,27 +22,27 @@ const PartnershipsPage: React.FC<PartnershipsPageProps> = ({ onNavigate }) => {
   const partnerTypes = [
     {
       icon: <Landmark className="w-10 h-10" />,
-      title: "Institutions & Gouvernance",
-      desc: "Accompagnement dans l'exécution de programmes nationaux de transformation digitale et de souveraineté numérique.",
-      features: ["Assistance technique", "Numérisation publique", "Conseil stratégique"]
+      title: "Institutions & Gouvernements",
+      desc: "Conception et exécution de programmes de formation professionnelle et d'insertion digitale alignés sur les priorités nationales de développement du capital humain.",
+      features: ["Formation professionnelle", "Programmes d'insertion", "Accompagnement stratégique"]
     },
     {
       icon: <Building2 className="w-10 h-10" />,
       title: "Secteur Privé",
-      desc: "Collaboration pour l'intégration de talents certifiés et le développement de solutions software sur-mesure.",
-      features: ["Externalisation technique", "Recrutement de talents", "Audit de scalabilité"]
+      desc: "Collaboration pour la formation des équipes, l'accès à un vivier de talents certifiés internationalement, et l'accompagnement en transformation digitale.",
+      features: ["Formations sur mesure", "Recrutement de talents certifiés", "Consulting digital"]
     },
     {
       icon: <GraduationCap className="w-10 h-10" />,
       title: "Académique & Recherche",
-      desc: "Partenariats pour l'alignement des cursus académiques avec les besoins réels du marché global.",
-      features: ["Certification conjointe", "Hubs d'innovation", "Parcours hybrides"]
+      desc: "Partenariats pour aligner les cursus académiques avec les besoins réels du marché, co-développer des programmes de certification internationale, et alimenter les travaux d'Open Intelligence.",
+      features: ["Certification conjointe", "Programmes de recherche", "Parcours hybrides"]
     },
     {
       icon: <Handshake className="w-10 h-10" />,
       title: "ONG & Bailleurs de fonds",
-      desc: "Mise en œuvre opérationnelle de projets à fort impact social et économique via le numérique.",
-      features: ["Mesure d'impact", "Durabilité des projets", "Déploiement terrain"]
+      desc: "Mise en œuvre opérationnelle de programmes de formation et d'insertion à fort impact social, avec un engagement de reporting rigoureux et de suivi post-formation des bénéficiaires.",
+      features: ["Suivi d'impact vérifiable", "Exécution terrain", "Reporting transparent"]
     }
   ];
 
@@ -50,26 +50,26 @@ const PartnershipsPage: React.FC<PartnershipsPageProps> = ({ onNavigate }) => {
     {
       id: "01",
       icon: <Search className="w-6 h-6" />,
-      title: "Audit & Alignement",
-      desc: "Analyse profonde de vos objectifs et identification des synergies opérationnelles avec notre infrastructure."
+      title: "Diagnostic & Alignement",
+      desc: "Analyse approfondie de vos objectifs, de votre contexte et identification des points de collaboration concrets avec notre écosystème de formation et d'insertion."
     },
     {
       id: "02",
       icon: <Layout className="w-6 h-6" />,
-      title: "Design de Solution",
-      desc: "Co-conception d'un cadre d'intervention précis, avec indicateurs de succès et calendrier d'exécution."
+      title: "Co-conception du programme",
+      desc: "Élaboration conjointe d'un cadre d'intervention précis : objectifs chiffrés, indicateurs de succès, calendrier d'exécution et modalités de reporting."
     },
     {
       id: "03",
       icon: <Rocket className="w-6 h-6" />,
-      title: "Exécution & Déploiement",
-      desc: "Mise en œuvre rigoureuse par nos équipes d'ingénieurs et de mentors, avec une présence terrain constante."
+      title: "Exécution & Terrain",
+      desc: "Déploiement rigoureux par nos équipes de formateurs et de coordinateurs de projet, avec une présence terrain constante et un suivi documenté à chaque étape."
     },
     {
       id: "04",
       icon: <BarChart className="w-6 h-6" />,
-      title: "Scale & Impact",
-      desc: "Évaluation continue, optimisation des performances et passage à l'échelle pour maximiser le ROI social ou économique."
+      title: "Mesure d'impact & Amélioration",
+      desc: "Évaluation continue des résultats via notre Impact Tracker, reporting régulier aux partenaires, et ajustement du programme en fonction des données collectées."
     }
   ];
 
@@ -86,11 +86,11 @@ const PartnershipsPage: React.FC<PartnershipsPageProps> = ({ onNavigate }) => {
             Synergies Stratégiques
           </div>
           <h1 className="text-4xl md:text-7xl font-black text-white mb-8 leading-[1.1] tracking-tighter">
-            Bâtir des alliances pour <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-200 to-slate-500">un impact systémique.</span>
+            Nos <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-200 to-slate-500">Partenariats</span>
           </h1>
           <p className="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed font-light">
-            Itot Africa n'agit pas seule. Nous construisons une infrastructure collaborative où chaque partenaire joue un rôle clé dans l'accélération numérique du continent.
+            Bâtir des alliances pour un impact concret et mesurable. Itot Africa n'agit pas seule. Nous construisons un réseau de partenaires où chaque acteur joue un rôle clé dans le développement des compétences et de l'emploi digital sur le continent.
           </p>
         </div>
       </section>
@@ -99,9 +99,9 @@ const PartnershipsPage: React.FC<PartnershipsPageProps> = ({ onNavigate }) => {
       <section className="py-24 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="mb-20">
-             <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6">Nos Typologies d'Alliances.</h2>
+             <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6">Nos formes de collaboration</h2>
              <p className="text-slate-500 max-w-2xl text-lg">
-               Nous adaptons notre cadre de collaboration selon la nature et les objectifs de chaque organisation.
+               Nous adaptons notre cadre de partenariat selon la nature et les objectifs de chaque organisation.
              </p>
           </div>
 
@@ -137,9 +137,9 @@ const PartnershipsPage: React.FC<PartnershipsPageProps> = ({ onNavigate }) => {
       <section className="py-24 px-6 bg-slate-950 text-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-3xl md:text-5xl font-black mb-6">Méthode d'Exécution.</h2>
+            <h2 className="text-3xl md:text-5xl font-black mb-6">Notre méthode de travail</h2>
             <p className="text-slate-400 text-lg font-light">
-              Notre approche est rigoureuse, structurée et orientée vers la livraison de résultats mesurables.
+              Notre approche est structurée, transparente et orientée vers la livraison de résultats mesurables.
             </p>
           </div>
 
@@ -188,8 +188,8 @@ const PartnershipsPage: React.FC<PartnershipsPageProps> = ({ onNavigate }) => {
                  <ShieldCheck size={40} />
               </div>
               <h2 className="text-4xl md:text-6xl font-black text-slate-900 mb-8 leading-[1.1] tracking-tight">
-                Devenez partenaire <br />
-                <span className="text-itot-teal">de l'infrastructure.</span>
+                Devenez notre <br />
+                <span className="text-itot-teal">prochain partenaire.</span>
               </h2>
               <p className="text-xl text-slate-500 max-w-2xl mb-12 font-light leading-relaxed">
                 Prêt à co-créer une solution technologique durable ou à transformer l'employabilité d'une génération ? Notre équipe stratégique vous répond sous 48h.

@@ -25,7 +25,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ onNavigate }) => {
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-itot-teal/10 text-itot-teal text-[10px] font-black uppercase tracking-[0.2em] mb-6">
               <Activity size={14} />
-              Capacités Opérationnelles
+              Capacités Opérationnelles, nos produits : 
             </div>
             <h2 className="text-4xl md:text-6xl font-black text-slate-900 leading-[1.1] tracking-tight">
               L'écosystème <br />
@@ -33,7 +33,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ onNavigate }) => {
             </h2>
           </div>
           <p className="text-slate-500 max-w-xs text-sm leading-relaxed border-l border-slate-200 pl-6">
-            Nous transformons des objectifs complexes en livrables tangibles grâce à trois pôles d'expertise intégrés.
+            Nous transformons des objectifs complexes en résultats tangibles grâce à trois pôles d'expertise intégrés.
           </p>
         </div>
 
@@ -49,20 +49,20 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ onNavigate }) => {
                 </div>
                 <h3 className="text-3xl font-black text-slate-900 mb-4 tracking-tight">Okademy : <br/>Le Moteur de Talents</h3>
                 <p className="text-slate-500 text-lg max-w-md font-light leading-relaxed">
-                  Formation intensive et certification de compétences numériques de classe mondiale pour les futurs leaders du continent.
+                  Formation intensive et certification en compétences numériques de niveau international pour les futurs professionnels du continent.
                 </p>
               </div>
               
               <div className="flex flex-col gap-6">
                 <div className="flex gap-4">
-                  <div className="px-4 py-2 rounded-xl bg-slate-50 border border-slate-100 text-[10px] font-bold text-slate-400 uppercase tracking-widest">+15k Talents</div>
-                  <div className="px-4 py-2 rounded-xl bg-slate-50 border border-slate-100 text-[10px] font-bold text-slate-400 uppercase tracking-widest">IA Powered</div>
+                  <div className="px-4 py-2 rounded-xl bg-slate-50 border border-slate-100 text-[10px] font-bold text-slate-400 uppercase tracking-widest">+10.7k apprenants</div>
+                  <div className="px-4 py-2 rounded-xl bg-slate-50 border border-slate-100 text-[10px] font-bold text-slate-400 uppercase tracking-widest">Certifications AWS, Cisco, etc.</div>
                 </div>
                 <button 
                   onClick={handleGoToSolutions}
                   className="flex items-center gap-3 text-itot-teal font-black text-sm group/btn"
                 >
-                  Découvrir le campus
+                  Découvrir Okademy
                   <div className="w-8 h-8 rounded-full bg-itot-teal/10 flex items-center justify-center group-hover/btn:bg-itot-teal group-hover/btn:text-white transition-all">
                     <ArrowUpRight size={16} />
                   </div>
@@ -92,9 +92,9 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ onNavigate }) => {
                  </div>
                  <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Build & Deploy</span>
                </div>
-               <h3 className="text-2xl font-bold text-white mb-4">Ingénierie sur-mesure</h3>
+               <h3 className="text-2xl font-bold text-white mb-4">Open Intelligence : L'éclaireur</h3>
                <p className="text-slate-400 text-sm leading-relaxed font-light">
-                 Développement de solutions software robustes pour entreprises et institutions.
+                 Recherche, veille de marché et production de données fiables sur les compétences et l'emploi digital en Afrique pour éclairer les décisions de formation, de recrutement et d'investissement.
                </p>
              </div>
              
@@ -119,9 +119,9 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ onNavigate }) => {
                     </div>
                     <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Souveraineté</span>
                   </div>
-                  <h3 className="text-2xl font-bold text-slate-900 mb-4">Conseil & Partenariats</h3>
+                  <h3 className="text-2xl font-bold text-slate-900 mb-4">Conseil & Exécution de projets </h3>
                   <p className="text-slate-500 text-sm leading-relaxed font-light">
-                    Accompagnement stratégique pour institutions et ONG à impact systémique.
+                    Conception et délivrance de programmes de formation, consulting en transformation digitale, et accompagnement stratégique pour entreprises et institutions. Partenaire de confiance
                   </p>
                </div>
                <div className="flex items-center gap-2 text-itot-teal">
@@ -135,18 +135,11 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ onNavigate }) => {
           <div className="md:col-span-12 mt-6 flex flex-wrap gap-4 items-center justify-center p-8 bg-white border border-slate-100 rounded-[32px] shadow-sm">
              <div className="flex items-center gap-3">
                 <Zap size={18} className="text-amber-500" />
-                <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Performance Directe :</span>
+                <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Ce qui nous distingue :</span>
              </div>
-             {[
-               { l: "Uptime", v: "99.9%" },
-               { l: "Satisfaction", v: "4.8/5" },
-               { l: "Placement", v: "92%" }
-             ].map((stat, i) => (
-               <div key={i} className="flex items-center gap-2 px-4 py-2 bg-slate-50 rounded-xl border border-slate-100">
-                  <span className="text-slate-900 font-black">{stat.v}</span>
-                  <span className="text-[10px] text-slate-400 uppercase">{stat.l}</span>
-               </div>
-             ))}
+             <p className="text-slate-500 text-sm leading-relaxed font-light">
+                    Chaque talent formé est suivi, chaque impact est mesuré, chaque formation est alimentée par les données du marché.
+              </p>
           </div>
 
         </div>

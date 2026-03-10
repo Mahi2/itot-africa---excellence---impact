@@ -12,11 +12,14 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2070&auto=format&fit=crop" 
-          alt="African professionals working" 
+          src="https://storage.googleapis.com/static.run.app/v1/projects/ais-dev-opwquycodwty5d63opxchz-443270475435/assets/1.png" 
+          alt="Itot Africa Talents" 
           className="w-full h-full object-cover"
+          referrerPolicy="no-referrer"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-teal-950/95 via-teal-900/80 to-transparent"></div>
+        {/* Creative overlay: deep gradient for readability on the left, with a touch of itot-teal and subtle blur */}
+        <div className="absolute inset-0 bg-gradient-to-r from-teal-950/80 via-teal-950/20 to-transparent"></div>
+        <div className="absolute inset-y-0 left-0 w-full md:w-1/2 bg-gradient-to-r from-itot-teal/5 to-transparent backdrop-blur-[1.5px]"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 w-full py-20">
@@ -26,15 +29,15 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-teal-500"></span>
             </span>
-            Bâtir l'avenir du numérique en Afrique
+            Bâtir le capital humain de l'Afrique digitale
           </div>
           
           <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
-            Transformer le potentiel en <span className="text-itot-teal bg-white px-2 inline-block">compétences</span> utiles.
+            De la formation certifiante à <span className="text-itot-teal bg-white px-2 inline-block">l'emploi concret.</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-white/80 font-light mb-10 leading-relaxed max-w-2xl">
-            Itot Africa est l'infrastructure humaine et digitale qui relie les individus, les entreprises et les institutions aux opportunités réelles de croissance.
+            Itot Africa est l'écosystème qui relie les talents, les entreprises et les institutions aux compétences réelles et aux opportunités durables de croissance.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
@@ -57,18 +60,23 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
 
           <div className="mt-12 flex items-center gap-6">
             <div className="flex -space-x-3">
-              {[1, 2, 3, 4].map((i) => (
+              {[
+                "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=150&h=150",
+                "https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?auto=format&fit=crop&w=150&h=150",
+                "https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?auto=format&fit=crop&w=150&h=150",
+                "https://images.unsplash.com/photo-1531384441138-2736e62e0919?auto=format&fit=crop&w=150&h=150"
+              ].map((src, i) => (
                 <img 
                   key={i} 
-                  src={`https://i.pravatar.cc/150?u=${i}`} 
+                  src={src} 
                   className="w-12 h-12 rounded-full border-2 border-teal-900 object-cover" 
                   alt="Talent"
+                  referrerPolicy="no-referrer"
                 />
               ))}
             </div>
             <div className="text-white/60 text-sm">
-              <span className="text-white font-bold block text-base">+15,000 Talents</span>
-              formés et connectés au marché
+              <span className="text-white font-bold block text-base">+10 700 apprenants formés | 200+ emplois générés | 30+ partenaires entreprises</span>
             </div>
           </div>
         </div>

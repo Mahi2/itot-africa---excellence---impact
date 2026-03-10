@@ -30,16 +30,16 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               </span>
             </div>
             <p className="text-slate-400 leading-relaxed mb-8">
-              L'infrastructure humaine et digitale qui transforme le potentiel de l'Afrique en compétences utiles et opportunités réelles.
+              L'écosystème qui relie les talents, les entreprises et les institutions aux compétences réelles et aux opportunités durables de croissance.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full border border-slate-800 flex items-center justify-center hover:bg-itot-teal hover:border-itot-teal transition-all">
+              <a href="https://www.linkedin.com/company/itot-africa/" className="w-10 h-10 rounded-full border border-slate-800 flex items-center justify-center hover:bg-itot-teal hover:border-itot-teal transition-all">
                 <Linkedin size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full border border-slate-800 flex items-center justify-center hover:bg-itot-teal hover:border-itot-teal transition-all">
+              <a href="https://x.com/Itot_africa" className="w-10 h-10 rounded-full border border-slate-800 flex items-center justify-center hover:bg-itot-teal hover:border-itot-teal transition-all">
                 <Twitter size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full border border-slate-800 flex items-center justify-center hover:bg-itot-teal hover:border-itot-teal transition-all">
+              <a href="https://web.facebook.com/itotafrica" className="w-10 h-10 rounded-full border border-slate-800 flex items-center justify-center hover:bg-itot-teal hover:border-itot-teal transition-all">
                 <Facebook size={18} />
               </a>
             </div>
@@ -70,11 +70,11 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <ul className="space-y-6 text-slate-400">
               <li className="flex gap-4">
                 <MapPin className="text-itot-teal shrink-0" size={20} />
-                <span>Kinshasa, RD Congo<br />Lubumbashi, RD Congo</span>
+                <span>Lubumbashi, RD Congo<br />Kinshasa, RD Congo</span>
               </li>
               <li className="flex gap-4">
                 <Phone className="text-itot-teal shrink-0" size={20} />
-                <span>+243 000 000 000</span>
+                <span>+243 978 400 415</span>
               </li>
               <li className="flex gap-4">
                 <Mail className="text-itot-teal shrink-0" size={20} />
@@ -85,7 +85,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         </div>
 
         <div className="pt-10 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-slate-500">
-          <p>© 2024 Itot Africa. Tous droits réservés.</p>
+          <p>© 2026 Itot Africa. Tous droits réservés.</p>
           <div className="flex gap-8">
             <a href="#" className="hover:text-white transition-colors">Mentions Légales</a>
             <a href="#" className="hover:text-white transition-colors">Confidentialité</a>

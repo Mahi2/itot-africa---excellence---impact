@@ -7,13 +7,13 @@ const ResponseSection: React.FC = () => {
 
   const pillars = [
     {
-      title: "Connecter les talents",
+      title: "Former et certifier les talents",
       subtitle: "Capital Humain",
-      desc: "Nous certifions le génie africain pour le rendre interopérable avec le marché mondial.",
+      desc: "Nous formons et certifions les talents africains avec des standards internationaux pour les rendre compétitifs sur le marché mondial.",
       details: [
-        "Certification de compétences",
-        "Matching IA intelligent",
-        "Parcours d'excellence"
+        "Certifications internationales (AWS, Cisco, etc.)",
+        "Accompagnement à l'insertion professionnelle",
+        "Parcours de formation alignés sur les besoins réels du marché"
       ],
       icon: <Users className="w-8 h-8" />,
       color: "from-teal-500/20 to-teal-500/5",
@@ -22,24 +22,24 @@ const ResponseSection: React.FC = () => {
     {
       title: "Propulser les entreprises",
       subtitle: "Secteur Privé",
-      desc: "Nous agissons comme le bras technique des leaders pour accélérer leur exécution digitale.",
+      desc: "Nous agissons comme le partenaire technique des entreprises pour accélérer leur transformation digitale et former leurs équipes.",
       details: [
-        "Ingénierie sur-mesure",
-        "Externalisation stratégique",
-        "Audit de scalabilité"
+        "Formations sur mesure pour les entreprises",
+        "Consulting en transformation digitale",
+        "Accès à un vivier de talents certifiés"
       ],
       icon: <Building2 className="w-8 h-8" />,
       color: "from-blue-500/20 to-blue-500/5",
       accent: "#3b82f6"
     },
     {
-      title: "Bâtir les institutions",
-      subtitle: "Gouvernance & ONG",
-      desc: "Nous garantissons la souveraineté numérique par des infrastructures à impact systémique.",
+      title: "Exécuter des projets à impact",
+      subtitle: "Institutions & Bailleurs",
+      desc: "Nous concevons et délivrons des programmes de formation à impact social mesurable, avec un suivi rigoureux des résultats.",
       details: [
-        "Infrastructures publiques",
-        "Suivi d'impact en temps réel",
-        "Conseil en souveraineté"
+        "Conception et exécution de programme de formation",
+        "Suivi d'impact post-formation (Impact Tracker)",
+        "Intelligence de marché sur les compétences"
       ],
       icon: <Landmark className="w-8 h-8" />,
       color: "from-purple-500/20 to-purple-500/5",
@@ -61,15 +61,15 @@ const ResponseSection: React.FC = () => {
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-6">
               <Zap className="text-itot-teal animate-pulse" size={20} />
-              <span className="text-itot-teal font-black text-xs uppercase tracking-[0.4em]">Levier Opérationnel</span>
+              <span className="text-itot-teal font-black text-xs uppercase tracking-[0.4em]">Levier Opérationnel, notre approche :</span>
             </div>
             <h2 className="text-5xl md:text-7xl font-black text-white leading-[0.9] tracking-tighter">
-              Une infrastructure <br />
+              Un écosystème <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-200 to-slate-500">en trois dimensions.</span>
             </h2>
           </div>
           <p className="text-slate-400 max-w-sm text-lg leading-relaxed font-light border-l border-white/10 pl-8">
-            Nous ne nous contentons pas de répondre au marché. Nous le structurons par une exécution sans compromis.
+            Nous ne nous contentons pas de répondre au marché. Nous le structurons par la formation certifiante, l'intelligence de marché et l'insertion vérifiable.
           </p>
         </div>
 
@@ -152,12 +152,12 @@ const ResponseSection: React.FC = () => {
            <div className="flex items-center gap-8">
               <div className="relative">
                  <div className="w-16 h-16 rounded-full border-2 border-dashed border-itot-teal animate-spin-slow"></div>
-                 <div className="absolute inset-0 flex items-center justify-center text-itot-teal font-black text-xs">ITOT</div>
+                 <div className="absolute inset-0 flex items-center justify-center text-itot-teal font-black text-xs">Itot Africa</div>
               </div>
               <div>
-                <h4 className="text-white font-bold text-xl mb-1">Convergence Systémique</h4>
+                <h4 className="text-white font-bold text-xl mb-1">Convergence</h4>
                 <p className="text-slate-500 max-w-md text-sm leading-relaxed">
-                  L'infrastructure Itot Africa opère simultanément sur ces trois leviers pour créer un cycle de croissance auto-entretenu.
+                  Itot Africa opère simultanément sur ces trois leviers pour créer un cycle vertueux : la recherche éclaire les formations, les formations produisent des talents certifiés, les talents servent les entreprises et les institutions, et les données d'impact renforcent la crédibilité de l'ensemble.
                 </p>
               </div>
            </div>

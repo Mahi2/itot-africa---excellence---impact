@@ -9,30 +9,30 @@ const ProblemSection: React.FC = () => {
     {
       id: "01",
       title: "Le Gisement Invisible",
-      desc: "Des millions de jeunes talents possèdent un potentiel brut exceptionnel, mais restent invisibles sur l'échiquier mondial faute de certifications et de projets concrets.",
+      desc: "Des millions de jeunes talents possèdent un potentiel brut exceptionnel, mais restent invisibles sur le marché mondial faute de certifications reconnues et d'expérience sur des projets concrets.",
       icon: <Users className="w-6 h-6" />,
       category: "Capital Humain"
     },
     {
       id: "02",
-      title: "L'Écart d'Exécution",
-      desc: "Les institutions ont la vision, mais peinent à trouver l'infrastructure technique locale capable de livrer des projets complexes aux standards internationaux.",
+      title: "L'Ecart de Livraison",
+      desc: "Les institutions et les bailleurs ont la vision et les budgets, mais peinent à trouver des partenaires techniques locaux capables de livrer des projets complexes aux standards internationaux.",
       icon: <Target className="w-6 h-6" />,
-      category: "Infrastructure"
+      category: "CAPACITE D'EXECUTION"
     },
     {
       id: "03",
-      title: "Déficit de Compétences",
-      desc: "Le marché de l'emploi demande de l'agilité digitale, là où les systèmes classiques offrent encore de la théorie.",
+      title: "Le Décalage Formation-Marché",
+      desc: "Le marché de l'emploi exige des compétences digitales pratiques et actualisées, là où les systèmes éducatifs classiques proposent encore de la théorie déconnectée du terrain.",
       icon: <Zap className="w-6 h-6" />,
-      category: "Agilité"
+      category: "COMPETENCES"
     },
     {
       id: "04",
-      title: "Impact Non Durable",
-      desc: "Sans infrastructure humaine locale solide, les investissements technologiques s'effondrent après quelques mois.",
+      title: "Impact Non Mésuré",
+      desc: "Sans suivi post-formation et sans données fiables sur l'insertion professionnelle, les investissements dans la formation s'évaporent sans laisser de trace vérifiable.",
       icon: <BarChart3 className="w-6 h-6" />,
-      category: "Durabilité"
+      category: "IMPACT"
     }
   ];
 
@@ -85,7 +85,7 @@ const ProblemSection: React.FC = () => {
               </div>
 
               <div className="relative z-10 pt-8 flex items-center gap-2 text-itot-teal font-bold text-sm opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                Analyse de friction
+                Comprendre le défi
                 <ArrowUpRight size={18} />
               </div>
 
@@ -98,14 +98,10 @@ const ProblemSection: React.FC = () => {
         {/* Bottom Insight */}
         <div className="mt-16 flex flex-col md:flex-row items-center justify-between gap-8 p-8 rounded-2xl bg-white/[0.02] border border-white/5">
           <p className="text-slate-500 text-sm max-w-2xl">
-            Ce constat n'est pas une fatalité, mais le point de départ de notre mission. <span className="text-white">Itot Africa</span> a été bâtie pour résoudre ces quatre ruptures par une infrastructure intégrée.
+            Ce constat n'est pas une fatalité. C'est le point de départ de notre mission. Itot Africa a été bâtie pour résoudre ces quatre ruptures par un écosystème intégré de formation, de certification et d'insertion.
           </p>
-          <div className="flex -space-x-2">
-            {[1,2,3].map(i => (
-              <div key={i} className="w-10 h-10 rounded-full border-2 border-slate-950 bg-slate-800 flex items-center justify-center text-[10px] font-bold text-itot-teal">
-                ITOT
-              </div>
-            ))}
+          <div className="flex items-center gap-4">
+            <span className="text-[10px] font-black text-itot-teal uppercase tracking-[0.3em] rotate-180 [writing-mode:vertical-lr]">Mission</span>
           </div>
         </div>
       </div>

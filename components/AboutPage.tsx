@@ -62,10 +62,10 @@ const AboutPage: React.FC = () => {
             <div className="w-12 h-1 bg-itot-teal mb-6"></div>
             <h4 className="text-teal-400 font-bold tracking-widest uppercase text-sm mb-4">À propos de Itot Africa</h4>
             <h1 className="text-4xl md:text-6xl font-black text-white leading-tight mb-8">
-              L'Infrastructure de Transformation <span className="text-itot-teal bg-white/10 px-2 inline-block backdrop-blur-sm">Digitale</span> de l'Afrique.
+              L'écosystème de formation, de certification et d'insertion <span className="text-itot-teal bg-white/10 px-2 inline-block backdrop-blur-sm">digitale</span> en Afrique.
             </h1>
             <p className="text-xl md:text-2xl text-slate-200 leading-relaxed font-light">
-              Bien plus qu'un prestataire de services, nous sommes un mécanisme d'exécution stratégique conçu pour convertir le potentiel brut du continent en une force économique réelle et durable.
+              Bien plus qu'un prestataire de services, nous sommes le partenaire d'exécution qui transforme le potentiel brut du continent en compétences certifiées, en emplois concrets et en intelligence de marché actionnable.
             </p>
           </div>
         </div>
@@ -76,17 +76,17 @@ const AboutPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="lg:w-1/2">
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">Un Rôle d'Infrastructure</h2>
+              <h2 className="text-3xl font-bold text-slate-900 mb-6">Notre rôle dans l'écosystème</h2>
               <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                Itot Africa opère comme une **infrastructure humaine et technologique**. Nous ne nous contentons pas de former ou de développer ; nous construisons les fondations nécessaires pour que les acteurs de l'écosystème africain puissent interagir de manière efficace.
+                Itot Africa opère comme le pont entre le potentiel et l'emploi. Nous ne nous contentons pas de former : nous certifions avec des standards internationaux, nous suivons chaque apprenant jusqu'à l'insertion professionnelle, et nous produisons les données de marché qui éclairent chaque décision.
               </p>
               <div className="bg-teal-50 p-6 rounded-2xl border-l-4 border-itot-teal mb-6">
                 <p className="text-slate-800 font-medium italic">
-                  "Nous sommes le chaînon manquant entre la volonté politique/institutionnelle et la réalité du terrain technologique."
+                  "Le continent ne manque ni de talents ni de volonté. Il manque de structures capables de transformer l'un en l'autre avec rigueur, transparence et résultats mesurables. C'est notre raison d'être."
                 </p>
               </div>
               <p className="text-lg text-slate-600 leading-relaxed">
-                En agissant comme un pont, nous permettons aux talents d'accéder aux marchés mondiaux et aux organisations de trouver l'excellence technique dont elles ont besoin pour croître localement.
+                En agissant comme ce pont, nous permettons aux talents d'accéder aux certifications reconnues mondialement et aux opportunités d'emploi, aux entreprises de trouver les compétences qualifiées dont elles ont besoin pour croître, et aux institutions de mesurer l'impact réel de leurs investissements dans le capital humain.
               </p>
             </div>
             
@@ -98,17 +98,17 @@ const AboutPage: React.FC = () => {
                       <div className="p-6 bg-slate-50 rounded-xl flex flex-col items-center gap-3">
                         <Users className="text-itot-teal w-10 h-10" />
                         <h4 className="font-bold text-slate-900">Capital Humain</h4>
-                        <p className="text-xs text-slate-500 uppercase tracking-widest">Compétences & Talents</p>
+                        <p className="text-xs text-slate-500 uppercase tracking-widest">Formation certifiante & insertion professionnelle</p>
                       </div>
                       <div className="p-6 bg-slate-50 rounded-xl flex flex-col items-center gap-3">
                         <Cpu className="text-itot-teal w-10 h-10" />
-                        <h4 className="font-bold text-slate-900">Digitalisation</h4>
-                        <p className="text-xs text-slate-500 uppercase tracking-widest">Solutions & Systèmes</p>
+                        <h4 className="font-bold text-slate-900">Intelligence</h4>
+                        <p className="text-xs text-slate-500 uppercase tracking-widest">Recherche, données de marché & aide à la décision</p>
                       </div>
                       <div className="md:col-span-2 p-6 bg-itot-teal text-white rounded-xl shadow-lg transform hover:scale-[1.02] transition-transform">
                         <Layers className="w-8 h-8 mx-auto mb-2" />
                         <h4 className="font-bold text-xl uppercase tracking-widest">ITOT AFRICA</h4>
-                        <p className="text-sm text-teal-100">Le Pont d'Exécution</p>
+                        <p className="text-sm text-teal-100">Le pont entre le potentiel et l'emploi</p>
                       </div>
                     </div>
                  </div>
@@ -122,9 +122,9 @@ const AboutPage: React.FC = () => {
       <section className="py-24 px-6 bg-slate-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">Une Approche Orientée Résultats</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">Une approche orientée résultats</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Notre méthodologie repose sur trois piliers fondamentaux qui garantissent la pérennité de nos actions.
+              Notre méthodologie repose sur trois piliers fondamentaux qui garantissent la crédibilité et la pérennité de nos actions.
             </p>
           </div>
 
@@ -135,7 +135,7 @@ const AboutPage: React.FC = () => {
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-4">Exécution Rigoureuse</h3>
               <p className="text-slate-600 leading-relaxed">
-                Nous ne nous arrêtons pas au conseil. Nous implémentons les solutions avec une rigueur technique de standard international, assurant une transition fluide de l'idée à la réalité.
+                Nous ne nous arrêtons pas à la promesse. Nous concevons, délivrons et mesurons chaque programme de formation et chaque projet avec une rigueur documentée à chaque étape — du premier atelier au dernier rapport d'impact.
               </p>
             </div>
 
@@ -143,9 +143,9 @@ const AboutPage: React.FC = () => {
               <div className="w-16 h-16 bg-teal-50 text-itot-teal rounded-2xl flex items-center justify-center mb-8 group-hover:bg-itot-teal group-hover:text-white transition-colors">
                 <Map className="w-8 h-8" />
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Présence Terrain</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Ancrage terrain</h3>
               <p className="text-slate-600 leading-relaxed">
-                Notre connaissance profonde des réalités locales nous permet de concevoir des interventions adaptées au contexte africain, là où les modèles théoriques échouent souvent.
+                Notre présence à Lubumbashi et à Kinshasa, notre facilité à nous déployer dans les autres villes du pays, et notre connaissance profonde des réalités locales nous permettent de concevoir des formations adaptées au contexte congolais et africain là où les modèles importés échouent souvent.
               </p>
             </div>
 
@@ -153,9 +153,9 @@ const AboutPage: React.FC = () => {
               <div className="w-16 h-16 bg-teal-50 text-itot-teal rounded-2xl flex items-center justify-center mb-8 group-hover:bg-itot-teal group-hover:text-white transition-colors">
                 <TrendingUp className="w-8 h-8" />
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Impact Mesurable</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Impact mesuré et prouvé</h3>
               <p className="text-slate-600 leading-relaxed">
-                Chaque projet est évalué selon des indicateurs de performance clairs. Notre succès se mesure à la croissance des entreprises que nous accompagnons et à l'employabilité des talents que nous formons.
+                Chaque programme est évalué selon des indicateurs précis : taux de certification, taux d'insertion professionnelle, évolution salariale des apprenants. Notre département Open Intelligence produit les données qui prouvent notre impact et orientent nos décisions.
               </p>
             </div>
           </div>
@@ -169,10 +169,10 @@ const AboutPage: React.FC = () => {
             <div className="max-w-2xl">
               <div className="flex items-center gap-4 mb-4">
                 <div className="h-[1px] w-12 bg-itot-teal"></div>
-                <span className="text-itot-teal font-black text-xs uppercase tracking-[0.3em]">Infrastructure Humaine</span>
+                <span className="text-itot-teal font-black text-xs uppercase tracking-[0.3em]">Notre équipe</span>
               </div>
               <h2 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
-                Une équipe orientée <br />
+                Une équipe orientée<br />
                 <span className="text-slate-400">terrain et exécution.</span>
               </h2>
             </div>
@@ -206,13 +206,13 @@ const AboutPage: React.FC = () => {
 
           <div className="mt-24 p-12 bg-slate-50 rounded-[40px] border border-slate-100 flex flex-col lg:flex-row items-center justify-between gap-10">
              <div className="max-w-2xl">
-                <h4 className="text-2xl font-bold text-slate-900 mb-4">Le moteur de vos projets.</h4>
+                <h4 className="text-2xl font-bold text-slate-900 mb-4">Le moteur de vos projets</h4>
                 <p className="text-slate-600 leading-relaxed">
-                  Cette équipe est le levier opérationnel qui permet à Itot Africa de transformer des visions stratégiques en résultats concrets, jour après jour, sur chaque site d'intervention.
+                  Cette équipe est le levier opérationnel qui permet à Itot Africa de transformer des programmes de formation en résultats concrets : des apprenants certifiés, des talents insérés, des entreprises renforcées.
                 </p>
              </div>
              <button className="flex items-center gap-3 px-8 py-4 bg-slate-900 text-white font-black rounded-2xl hover:bg-itot-teal transition-all group shrink-0">
-               Rejoindre l'infrastructure
+               Rejoindre l'équipe
                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
              </button>
           </div>
@@ -223,7 +223,7 @@ const AboutPage: React.FC = () => {
       <section className="py-24 px-6 bg-slate-50">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-16 gap-8">
-            <h2 className="text-3xl md:text-5xl font-bold text-slate-900">Nos Valeurs Fondamentales.</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-900">Ce en quoi nous croyons, nos valeurs</h2>
             <div className="w-24 h-1 bg-itot-teal"></div>
           </div>
 
@@ -232,32 +232,32 @@ const AboutPage: React.FC = () => {
               <div className="mb-6 text-itot-teal">
                 <Award className="w-12 h-12" />
               </div>
-              <h4 className="text-xl font-bold text-slate-900 mb-3">Excellence</h4>
-              <p className="text-slate-500">Rechercher le plus haut standard dans chaque ligne de code et chaque session de formation.</p>
+              <h4 className="text-xl font-bold text-slate-900 mb-3">Transparence radicale</h4>
+              <p className="text-slate-500">Chaque décision documentée. Chaque engagement tracé. Chaque résultat partagé. Nous avons appris que la confiance ne se décrète pas. Elle se construit, une itération à la fois.</p>
             </div>
 
             <div className="flex flex-col">
               <div className="mb-6 text-itot-teal">
                 <ShieldCheck className="w-12 h-12" />
               </div>
-              <h4 className="text-xl font-bold text-slate-900 mb-3">Intégrité</h4>
-              <p className="text-slate-500">Agir avec transparence et responsabilité envers nos partenaires et nos bénéficiaires.</p>
+              <h4 className="text-xl font-bold text-slate-900 mb-3">Rigueur d'exécution</h4>
+              <p className="text-slate-500">Promettre moins, délivrer plus. Nous ne vendons pas des visions — nous livrons des résultats. Un programme annoncé ou un projet lancé est délivré dans les délais, avec les indicateurs promis.</p>
             </div>
 
             <div className="flex flex-col">
               <div className="mb-6 text-itot-teal">
                 <Target className="w-12 h-12" />
               </div>
-              <h4 className="text-xl font-bold text-slate-900 mb-3">Focus Impact</h4>
-              <p className="text-slate-500">Prioriser les actions qui génèrent une transformation réelle et quantifiable sur le long terme.</p>
+              <h4 className="text-xl font-bold text-slate-900 mb-3">Impact prouvé</h4>
+              <p className="text-slate-500">Si nous ne pouvons pas le mesurer, nous ne prétendons pas l'avoir fait. Notre crédibilité repose sur des données vérifiables, pas sur des estimations optimistes.</p>
             </div>
 
             <div className="flex flex-col">
               <div className="mb-6 text-itot-teal">
                 <Users className="w-12 h-12" />
               </div>
-              <h4 className="text-xl font-bold text-slate-900 mb-3">Collaboration</h4>
-              <p className="text-slate-500">Croire en la force de l'écosystème et travailler main dans la main avec tous les acteurs du changement.</p>
+              <h4 className="text-xl font-bold text-slate-900 mb-3">Apprentissage permanent</h4>
+              <p className="text-slate-500">Nous sommes une entreprise de formation. Si nous-mêmes cessons d'apprendre, nous perdons notre légitimité. Chaque erreur est une leçon documentée. Chaque projet livré fait l'objet d'un retour d'expérience.</p>
             </div>
           </div>
         </div>

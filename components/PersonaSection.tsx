@@ -44,7 +44,7 @@ const PersonaSection: React.FC<PersonaSectionProps> = ({ onNavigate }) => {
             icon={<User className="w-8 h-8" />}
             type="Individu"
             title="Particuliers"
-            description="Lancez votre carrière dans le numérique avec une formation pratique et un accès privilégié aux opportunités."
+            description="Lancez votre carrière dans le numérique avec une formation certifiante, un accompagnement concret et un accès direct aux opportunités d'emploi."
             cta="Démarrer ma formation"
             onClick={() => onNavigate('contact')}
           />
@@ -52,23 +52,23 @@ const PersonaSection: React.FC<PersonaSectionProps> = ({ onNavigate }) => {
             icon={<Building className="w-8 h-8" />}
             type="Secteur Privé"
             title="Entreprises"
-            description="Recrutez les meilleurs talents ou déléguez vos projets technologiques à une infrastructure de confiance."
+            description="Formez vos équipes aux compétences digitales, recrutez des talents certifiés ou confiez-nous vos projets de transformation numérique."
             cta="Trouver des solutions"
             onClick={() => onNavigate('contact')}
           />
           <PersonaCard 
             icon={<Landmark className="w-8 h-8" />}
-            type="Gouvernance"
-            title="Institutions"
-            description="Accélérez vos programmes de transformation nationale grâce à notre expertise en exécution de projets."
+            type="Institutions"
+            title="Gouvernements"
+            description="Accélérez vos programmes de développement des compétences grâce à notre expertise en conception et exécution de projets de formation."
             cta="Collaborer avec nous"
             onClick={() => onNavigate('contact')}
           />
           <PersonaCard 
             icon={<HeartHandshake className="w-8 h-8" />}
-            type="Social"
+            type="Impact"
             title="ONG & Bailleurs"
-            description="Maximisez le ROI social de vos interventions grâce à des projets digitaux durables et mesurables."
+            description="Maximisez l'impact de vos investissements grâce à des programmes de formation mesurables, avec suivi post-formation et reporting d'impact rigoureux."
             cta="Devenir partenaire"
             onClick={() => onNavigate('contact')}
           />

@@ -56,10 +56,10 @@ const SolutionsPage: React.FC<SolutionsPageProps> = ({ onNavigate }) => {
                 L’écosystème <span className="text-itot-teal">Okademy</span>.
               </h2>
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-                Okademy est bien plus qu'une plateforme d'apprentissage. C'est un moteur digital intelligent qui accompagne chaque apprenant, de l'acquisition de compétences brutes jusqu'à son épanouissement professionnel.
+                Okademy est bien plus qu'une plateforme d'apprentissage. C'est un écosystème digital intelligent qui accompagne chaque apprenant de l'acquisition de compétences jusqu'à son insertion professionnelle concrète.
               </p>
               <p className="text-lg text-slate-500 mb-10">
-                Nous avons conçu un outil propriétaire augmentée par l'Intelligence Artificielle pour garantir une progression réelle, personnalisée et centrée sur l'employabilité.
+                Nous construisons un outil propriétaire augmenté par l'Intelligence Artificielle pour garantir une progression réelle, personnalisée et centrée sur l'employabilité.
               </p>
               <div className="flex flex-wrap gap-4">
                 <button className="flex items-center gap-2 px-8 py-4 bg-itot-teal text-white font-bold rounded-xl hover:bg-teal-700 transition-all shadow-lg shadow-teal-900/10 group">
@@ -101,7 +101,7 @@ const SolutionsPage: React.FC<SolutionsPageProps> = ({ onNavigate }) => {
               </div>
               <h4 className="text-xl font-bold text-slate-900 mb-3">Coach IA Intégré</h4>
               <p className="text-slate-500 text-sm leading-relaxed">
-                Un assistant intelligent disponible 24/7 pour expliquer, reformuler et motiver l'apprenant à chaque étape du cours.
+                Un assistant intelligent disponible 24/7 pour expliquer, reformuler et accompagner l'apprenant à chaque étape de son parcours de formation.
               </p>
             </div>
 
@@ -111,7 +111,7 @@ const SolutionsPage: React.FC<SolutionsPageProps> = ({ onNavigate }) => {
               </div>
               <h4 className="text-xl font-bold text-slate-900 mb-3">Mentor IA Projets</h4>
               <p className="text-slate-500 text-sm leading-relaxed">
-                Une IA spécialisée qui aide à structurer, corriger et améliorer les livrables techniques en temps réel.
+                Une IA spécialisée qui aide à structurer, corriger et améliorer les livrables techniques en temps réel, simulant l'accompagnement d'un mentor senior.
               </p>
             </div>
 
@@ -121,7 +121,7 @@ const SolutionsPage: React.FC<SolutionsPageProps> = ({ onNavigate }) => {
               </div>
               <h4 className="text-xl font-bold text-slate-900 mb-3">Dashboard Intelligent</h4>
               <p className="text-slate-500 text-sm leading-relaxed">
-                Visualisation claire de la progression, des forces et des axes d'amélioration identifiés par nos algorithmes.
+                Visualisation claire de la progression, des compétences acquises et des axes d'amélioration identifiés par nos algorithmes pour l'apprenant comme pour les organisations partenaires.
               </p>
             </div>
 
@@ -129,9 +129,9 @@ const SolutionsPage: React.FC<SolutionsPageProps> = ({ onNavigate }) => {
               <div className="w-14 h-14 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center mb-6 group-hover:bg-amber-600 group-hover:text-white transition-colors">
                 <LineChart size={28} />
               </div>
-              <h4 className="text-xl font-bold text-slate-900 mb-3">Prédictions de Carrière</h4>
+              <h4 className="text-xl font-bold text-slate-900 mb-3">Orientation Carrière</h4>
               <p className="text-slate-500 text-sm leading-relaxed">
-                L'IA suggère les parcours optimaux basés sur les compétences acquises et les tendances du marché global.
+                L'IA croise les compétences acquises avec les données de notre département Open Intelligence pour suggérer les parcours professionnels les plus porteurs sur le marché.
               </p>
             </div>
           </div>
@@ -147,16 +147,16 @@ const SolutionsPage: React.FC<SolutionsPageProps> = ({ onNavigate }) => {
                 <GraduationCap size={14} />
                 Capital Humain
               </div>
-              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-8 leading-tight">Développement des Compétences utiles.</h2>
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-8 leading-tight">Développement de compétences qui mènent à l'emploi</h2>
               <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                Le marché ne cherche pas des diplômes, il cherche des solutions. Nous formons les talents aux technologies les plus demandées (Fullstack, Data, Cloud) en intégrant les réalités du marché de l'emploi.
+                Le marché ne cherche pas des diplômes. Il cherche des gens capables de résoudre des problèmes. Nous formons les talents aux technologies les plus demandées en intégrant les réalités concrètes du marché de l'emploi en RDC et en Afrique.
               </p>
               
               <div className="space-y-4 mb-10">
                 {[
-                  { title: "Okademy Programs", desc: "Notre campus intensif orienté projet et employabilité." },
-                  { title: "Soft Skills", desc: "Communication, gestion de projet et agilité." },
-                  { title: "Certification", desc: "Validation des acquis selon des standards internationaux." }
+                  { title: "Programmes Okademy", desc: "Des formations intensives orientées projet et employabilité, couvrant les domaines les plus demandés : Cloud Computing, Développement Web, Data, Marketing Digital et compétences entrepreneuriales." },
+                  { title: "Compétences professionnelles", desc: "Communication, gestion de projet, travail en équipe et préparation aux entretiens les compétences transversales que les employeurs recherchent autant que l'expertise technique." },
+                  { title: "Certifications internationales", desc: "Validation des compétences par des certifications reconnues mondialement : AWS Cloud Practitioner, Cisco CCNA, CompTIA Security+, Google Data Analytics. Un certificat Itot Africa ouvre des portes partout." }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4 p-4 rounded-xl border border-slate-50 hover:border-teal-100 hover:bg-teal-50/30 transition-all">
                     <CheckCircle2 className="text-itot-teal shrink-0" />
@@ -185,8 +185,8 @@ const SolutionsPage: React.FC<SolutionsPageProps> = ({ onNavigate }) => {
                   className="w-full aspect-square lg:aspect-auto lg:h-[600px] object-cover"
                 />
                 <div className="absolute bottom-8 left-8 right-8 p-6 bg-white/90 backdrop-blur-md rounded-2xl border border-white/50">
-                  <p className="text-slate-900 font-bold mb-1">Impact Okademy</p>
-                  <p className="text-slate-600 text-sm">Plus de 90% de taux d'insertion professionnelle après 6 mois.</p>
+                  <p className="text-slate-900 font-bold mb-1">Notre engagement</p>
+                  <p className="text-slate-600 text-sm">Chaque apprenant formé est suivi après sa formation. Nous mesurons le taux d'insertion professionnelle, l'évolution salariale et la satisfaction des employeurs — parce que la vraie mesure d'une formation, c'est ce qui se passe après.</p>
                 </div>
               </div>
             </div>
@@ -201,23 +201,23 @@ const SolutionsPage: React.FC<SolutionsPageProps> = ({ onNavigate }) => {
             <div className="lg:w-1/2">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-xs font-bold uppercase tracking-wider mb-6">
                 <Code2 size={14} />
-                Ingénierie & Terrain
+                Expertise technique
               </div>
-              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-8 leading-tight">Accompagnement & Implémentation technique.</h2>
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-8 leading-tight">Consulting & Transformation digitale</h2>
               <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                Nous ne nous contentons pas de concevoir ; nous bâtissons. Nous accompagnons les entreprises dans la réalisation de leurs produits digitaux avec une présence terrain constante.
+                Nous accompagnons les entreprises et les PME dans leur transformation numérique avec une présence terrain et une compréhension profonde du contexte local.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
                 <div className="p-6 bg-white rounded-2xl shadow-sm">
                   <Laptop className="text-itot-teal mb-4" />
-                  <h4 className="font-bold text-slate-900 mb-2">Développement Web & Mobile</h4>
-                  <p className="text-sm text-slate-500">Des architectures scalables et sécurisées.</p>
+                  <h4 className="font-bold text-slate-900 mb-2">Transformation digitale des entreprises</h4>
+                  <p className="text-sm text-slate-500">Stratégie digitale, mise en place d'outils de gestion, marketing digital, formation des équipes internes nous aidons les entreprises à intégrer le numérique dans leurs opérations quotidiennes.</p>
                 </div>
                 <div className="p-6 bg-white rounded-2xl shadow-sm">
                   <Server className="text-itot-teal mb-4" />
-                  <h4 className="font-bold text-slate-900 mb-2">Infrastructure & Cloud</h4>
-                  <p className="text-sm text-slate-500">Optimisation de vos systèmes d'information.</p>
+                  <h4 className="font-bold text-slate-900 mb-2">Développement de solutions sur mesure</h4>
+                  <p className="text-sm text-slate-500">Conception et développement de sites web, d'applications et de systèmes d'information adaptés aux besoins spécifiques de chaque organisation.</p>
                 </div>
               </div>
 
@@ -256,27 +256,27 @@ const SolutionsPage: React.FC<SolutionsPageProps> = ({ onNavigate }) => {
               <Handshake size={14} />
               Partenariats
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">Conseil & Synergies Institutionnelles.</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">Projets à impact pour institutions et bailleurs</h2>
             <p className="text-lg text-slate-600">
-              Nous collaborons avec les institutions publiques, les ONG et les grands groupes pour structurer des projets à impact systémique.
+              Nous concevons et exécutons des programmes de formation et d'insertion professionnelle pour le compte d'institutions publiques, de bailleurs de fonds et d'organisations à impact social, avec une exigence de résultats mesurables.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <div className="p-8 border border-slate-100 rounded-3xl hover:border-itot-teal transition-colors">
               <Users2 className="w-10 h-10 text-itot-teal mx-auto mb-6" />
-              <h4 className="text-xl font-bold mb-4">Gouvernance</h4>
-              <p className="text-slate-500 text-sm">Assistance technique pour les programmes nationaux de numérisation.</p>
+              <h4 className="text-xl font-bold mb-4">Institutions & Gouvernements</h4>
+              <p className="text-slate-500 text-sm">Conception et délivrance de programmes de formation professionnelle alignés sur les priorités nationales de développement des compétences et de l'emploi.</p>
             </div>
             <div className="p-8 border border-slate-100 rounded-3xl hover:border-itot-teal transition-colors">
               <Globe className="w-10 h-10 text-itot-teal mx-auto mb-6" />
-              <h4 className="text-xl font-bold mb-4">ONG & Bailleurs</h4>
-              <p className="text-slate-500 text-sm">Exécution opérationnelle de projets de développement technologique.</p>
+              <h4 className="text-xl font-bold mb-4">ONG & Bailleurs de fonds</h4>
+              <p className="text-slate-500 text-sm">Exécution opérationnelle de programmes de formation et d'insertion, avec reporting d'impact rigoureux : taux de certification, taux d'insertion, évolution professionnelle des bénéficiaires.</p>
             </div>
             <div className="p-8 border border-slate-100 rounded-3xl hover:border-itot-teal transition-colors">
               <Handshake className="w-10 h-10 text-itot-teal mx-auto mb-6" />
               <h4 className="text-xl font-bold mb-4">Secteur Privé</h4>
-              <p className="text-slate-500 text-sm">Externalisation stratégique et co-création de solutions innovantes.</p>
+              <p className="text-slate-500 text-sm">Formations sur mesure pour les équipes, accès au vivier de talents certifiés Okademy, et rapports sectoriels Open Intelligence sur les compétences et l'emploi digital.</p>
             </div>
           </div>
 
