@@ -3,7 +3,7 @@ import React from 'react';
 import { ArrowRight, Users, Building2 } from 'lucide-react';
 
 interface HeroProps {
-  onNavigate: (page: 'home' | 'about' | 'solutions' | 'impact' | 'partnerships' | 'contact') => void;
+  onNavigate: (path: string) => void;
 }
 
 const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
@@ -33,17 +33,17 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
             Bâtir le capital humain de l'Afrique digitale
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6 drop-shadow-2xl">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6 drop-shadow-2xl">
             De la formation certifiante à <span className="text-itot-teal bg-white px-2 inline-block">l'emploi concret.</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-white font-medium mb-10 leading-relaxed max-w-2xl drop-shadow-md">
+          <p className="text-lg md:text-2xl text-white font-medium mb-10 leading-relaxed max-w-2xl drop-shadow-md">
             Itot Africa est l'écosystème qui relie les talents, les entreprises et les institutions aux compétences réelles et aux opportunités durables de croissance.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
             <button 
-              onClick={() => onNavigate('contact')}
+              onClick={() => onNavigate('/contact')}
               className="group flex items-center justify-center gap-3 px-8 py-5 bg-itot-teal text-white rounded-xl font-bold text-lg hover:bg-teal-600 transition-all shadow-2xl shadow-teal-950/40"
             >
               <Users className="w-5 h-5" />
@@ -51,7 +51,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             <button 
-              onClick={() => onNavigate('contact')}
+              onClick={() => onNavigate('/contact')}
               className="flex items-center justify-center gap-3 px-8 py-5 bg-white/10 backdrop-blur-md border border-white/30 text-white rounded-xl font-bold text-lg hover:bg-white/20 transition-all"
             >
               <Building2 className="w-5 h-5" />

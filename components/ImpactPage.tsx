@@ -65,10 +65,10 @@ const ImpactPage: React.FC = () => {
             <Trophy size={14} />
             Notre Héritage d'Excellence
           </div>
-          <h1 className="text-4xl md:text-7xl font-black text-white mb-8 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-7xl font-black text-white mb-8 leading-tight">
             Des résultats concrets,<br />un impact <span className="text-itot-teal">systémique</span>.
           </h1>
-          <p className="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed font-light">
+          <p className="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed font-light">
             Au-delà des mots, nous mesurons notre succès par la transformation réelle des individus et la croissance durable des organisations que nous accompagnons.
           </p>
         </div>
@@ -77,19 +77,19 @@ const ImpactPage: React.FC = () => {
       {/* 2. CHIFFRES CLÉS SECTION */}
       <section className="py-20 px-6 bg-white relative z-20 -mt-10">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {[
               { label: "Talents formés", value: "10,700+", icon: <Users />, color: "bg-teal-50 text-itot-teal" },
               { label: "Taux d'insertion", value: "47%", icon: <Target />, color: "bg-blue-50 text-blue-600" },
               { label: "Entreprises partenaires", value: "10+", icon: <Briefcase />, color: "bg-purple-50 text-purple-600" },
               { label: "Projets délivrés", value: "92+", icon: <Globe2 />, color: "bg-amber-50 text-amber-600" }
             ].map((stat, i) => (
-              <div key={i} className="bg-white p-8 rounded-[32px] shadow-xl shadow-slate-200/50 border border-slate-50 flex flex-col items-center text-center group hover:-translate-y-2 transition-all duration-300">
+              <div key={i} className="bg-white p-6 md:p-8 rounded-[32px] shadow-xl shadow-slate-200/50 border border-slate-50 flex flex-col items-center text-center group hover:-translate-y-2 transition-all duration-300">
                 <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 ${stat.color} group-hover:scale-110 transition-transform`}>
                   {React.cloneElement(stat.icon as React.ReactElement<any>, { size: 28 })}
                 </div>
-                <div className="text-4xl font-black text-slate-900 mb-2">{stat.value}</div>
-                <div className="text-slate-500 font-medium uppercase text-xs tracking-widest">{stat.label}</div>
+                <div className="text-3xl md:text-4xl font-black text-slate-900 mb-2">{stat.value}</div>
+                <div className="text-slate-500 font-medium uppercase text-[10px] md:text-xs tracking-widest">{stat.label}</div>
               </div>
             ))}
           </div>

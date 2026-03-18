@@ -4,7 +4,7 @@ import { User, Building, Landmark, HeartHandshake, ArrowRight } from 'lucide-rea
 import { PersonaCardProps } from '../types';
 
 interface PersonaSectionProps {
-  onNavigate: (page: 'home' | 'about' | 'solutions' | 'impact' | 'partnerships' | 'contact') => void;
+  onNavigate: (path: string) => void;
 }
 
 const PersonaCard: React.FC<PersonaCardProps & { onClick: () => void }> = ({ type, title, description, cta, icon, onClick }) => (
@@ -33,7 +33,7 @@ const PersonaSection: React.FC<PersonaSectionProps> = ({ onNavigate }) => {
       
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6">Pour qui nous agissons.</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">Pour qui nous agissons.</h2>
           <p className="text-lg text-slate-600">
             Itot Africa adapte son approche pour répondre aux enjeux spécifiques de chaque acteur de l'écosystème.
           </p>
@@ -46,7 +46,7 @@ const PersonaSection: React.FC<PersonaSectionProps> = ({ onNavigate }) => {
             title="Particuliers"
             description="Lancez votre carrière dans le numérique avec une formation certifiante, un accompagnement concret et un accès direct aux opportunités d'emploi."
             cta="Démarrer ma formation"
-            onClick={() => onNavigate('contact')}
+            onClick={() => onNavigate('/contact')}
           />
           <PersonaCard 
             icon={<Building className="w-8 h-8" />}
@@ -54,7 +54,7 @@ const PersonaSection: React.FC<PersonaSectionProps> = ({ onNavigate }) => {
             title="Entreprises"
             description="Formez vos équipes aux compétences digitales, recrutez des talents certifiés ou confiez-nous vos projets de transformation numérique."
             cta="Trouver des solutions"
-            onClick={() => onNavigate('contact')}
+            onClick={() => onNavigate('/contact')}
           />
           <PersonaCard 
             icon={<Landmark className="w-8 h-8" />}
@@ -62,7 +62,7 @@ const PersonaSection: React.FC<PersonaSectionProps> = ({ onNavigate }) => {
             title="Gouvernements"
             description="Accélérez vos programmes de développement des compétences grâce à notre expertise en conception et exécution de projets de formation."
             cta="Collaborer avec nous"
-            onClick={() => onNavigate('contact')}
+            onClick={() => onNavigate('/contact')}
           />
           <PersonaCard 
             icon={<HeartHandshake className="w-8 h-8" />}
@@ -70,7 +70,7 @@ const PersonaSection: React.FC<PersonaSectionProps> = ({ onNavigate }) => {
             title="ONG & Bailleurs"
             description="Maximisez l'impact de vos investissements grâce à des programmes de formation mesurables, avec suivi post-formation et reporting d'impact rigoureux."
             cta="Devenir partenaire"
-            onClick={() => onNavigate('contact')}
+            onClick={() => onNavigate('/contact')}
           />
         </div>
       </div>

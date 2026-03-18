@@ -74,13 +74,13 @@ const ResponseSection: React.FC = () => {
         </div>
 
         {/* Immersive Pillars Gallery */}
-        <div className="flex flex-col lg:flex-row gap-4 h-[600px] lg:h-[500px]">
+        <div className="flex flex-col lg:flex-row gap-4 min-h-[800px] lg:h-[500px]">
           {pillars.map((pillar, index) => (
             <div
               key={index}
               onMouseEnter={() => setActivePillar(index)}
               className={`relative overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] rounded-[40px] border border-white/10 group cursor-pointer
-                ${activePillar === index ? 'flex-[2.5] bg-white/10 backdrop-blur-3xl shadow-2xl' : 'flex-1 bg-white/5 grayscale opacity-40'}
+                ${activePillar === index ? 'flex-[3] lg:flex-[2.5] bg-white/10 backdrop-blur-3xl shadow-2xl' : 'flex-1 bg-white/5 grayscale opacity-40'}
               `}
             >
               {/* Pillar Background Label (Vertical) */}
@@ -91,7 +91,7 @@ const ResponseSection: React.FC = () => {
               </div>
 
               {/* Card Content */}
-              <div className={`h-full p-10 flex flex-col justify-between transition-all duration-500
+              <div className={`h-full p-6 md:p-10 flex flex-col justify-between transition-all duration-500
                 ${activePillar === index ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 lg:translate-x-10'}
               `}>
                 <div>

@@ -15,7 +15,7 @@ import {
 } from 'lucide-react';
 
 interface PartnershipsPageProps {
-  onNavigate: (page: 'home' | 'about' | 'solutions' | 'impact' | 'partnerships' | 'contact') => void;
+  onNavigate: (path: string) => void;
 }
 
 const PartnershipsPage: React.FC<PartnershipsPageProps> = ({ onNavigate }) => {
@@ -85,11 +85,11 @@ const PartnershipsPage: React.FC<PartnershipsPageProps> = ({ onNavigate }) => {
             <Handshake size={14} />
             Synergies Stratégiques
           </div>
-          <h1 className="text-4xl md:text-7xl font-black text-white mb-8 leading-[1.1] tracking-tighter">
+          <h1 className="text-3xl sm:text-4xl md:text-7xl font-black text-white mb-8 leading-[1.1] tracking-tighter">
             Nos <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-200 to-slate-500">Partenariats</span>
           </h1>
-          <p className="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed font-light">
+          <p className="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed font-light">
             Bâtir des alliances pour un impact concret et mesurable. Itot Africa n'agit pas seule. Nous construisons un réseau de partenaires où chaque acteur joue un rôle clé dans le développement des compétences et de l'emploi digital sur le continent.
           </p>
         </div>
@@ -143,16 +143,16 @@ const PartnershipsPage: React.FC<PartnershipsPageProps> = ({ onNavigate }) => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-px bg-white/10 rounded-[40px] overflow-hidden border border-white/10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-px bg-white/10 rounded-[40px] overflow-hidden border border-white/10">
             {steps.map((step, i) => (
-              <div key={i} className="p-10 bg-slate-950 flex flex-col justify-between min-h-[350px] group">
+              <div key={i} className="p-8 md:p-10 bg-slate-950 flex flex-col justify-between min-h-[300px] md:min-h-[350px] group">
                 <div>
-                   <span className="text-5xl font-black text-white/5 mb-8 block group-hover:text-itot-teal/20 transition-colors">{step.id}</span>
+                   <span className="text-4xl md:text-5xl font-black text-white/5 mb-8 block group-hover:text-itot-teal/20 transition-colors">{step.id}</span>
                    <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-itot-teal mb-6">
                      {step.icon}
                    </div>
-                   <h4 className="text-xl font-bold mb-4">{step.title}</h4>
-                   <p className="text-slate-400 text-sm leading-relaxed font-light">
+                   <h4 className="text-lg md:text-xl font-bold mb-4">{step.title}</h4>
+                   <p className="text-slate-400 text-xs md:text-sm leading-relaxed font-light">
                      {step.desc}
                    </p>
                 </div>
@@ -196,7 +196,7 @@ const PartnershipsPage: React.FC<PartnershipsPageProps> = ({ onNavigate }) => {
               </p>
               <div className="flex flex-col sm:flex-row gap-6">
                 <button 
-                  onClick={() => onNavigate('contact')}
+                  onClick={() => onNavigate('/contact')}
                   className="px-10 py-5 bg-itot-teal text-white font-black rounded-2xl shadow-2xl shadow-itot-teal/20 hover:bg-[#004D40] transition-all flex items-center gap-3"
                 >
                   Initier une collaboration

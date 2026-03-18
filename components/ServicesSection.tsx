@@ -3,13 +3,13 @@ import React from 'react';
 import { ArrowUpRight, GraduationCap, Code2, Globe, Activity, ShieldCheck, Zap, Layers, Target, BarChart3 } from 'lucide-react';
 
 interface ServicesSectionProps {
-  onNavigate: (page: 'home' | 'about' | 'solutions' | 'impact' | 'partnerships' | 'contact') => void;
+  onNavigate: (path: string) => void;
 }
 
 const ServicesSection: React.FC<ServicesSectionProps> = ({ onNavigate }) => {
   const handleGoToSolutions = (e: React.MouseEvent) => {
     e.preventDefault();
-    onNavigate('solutions');
+    onNavigate('/solutions');
   };
 
   return (
@@ -32,7 +32,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ onNavigate }) => {
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
             <div>
-              <h2 className="text-6xl md:text-8xl font-black text-white leading-[0.85] tracking-tighter mb-8">
+              <h2 className="text-4xl sm:text-6xl md:text-8xl font-black text-white leading-[0.85] tracking-tighter mb-8">
                 L'écosystème <br />
                 <span className="text-itot-teal">en action.</span>
               </h2>
@@ -63,7 +63,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ onNavigate }) => {
                   <GraduationCap size={14} />
                   Moteur de talents
                 </div>
-                <h3 className="text-4xl md:text-5xl font-black text-white mb-8 tracking-tight">Okademy : Le moteur de talents</h3>
+                <h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-8 tracking-tight">Okademy : Le moteur de talents</h3>
                 <p className="text-slate-400 text-lg font-light leading-relaxed mb-12 max-w-xl">
                   Formation intensive et certification en compétences numériques de niveau international pour les futurs professionnels du continent.
                 </p>
@@ -79,15 +79,17 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ onNavigate }) => {
                   </div>
                 </div>
 
-                <button 
-                  onClick={handleGoToSolutions}
+                <a 
+                  href="https://www.okademy.africa" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
                   className="group/btn flex items-center gap-4 text-white font-black text-sm w-fit"
                 >
                   <span className="border-b-2 border-itot-teal pb-1 group-hover/btn:border-white transition-all">Explorer le catalogue Okademy</span>
                   <div className="w-12 h-12 rounded-full bg-itot-teal text-white flex items-center justify-center group-hover/btn:scale-110 group-hover/btn:rotate-45 transition-all shadow-xl shadow-itot-teal/20">
                     <ArrowUpRight size={20} />
                   </div>
-                </button>
+                </a>
               </div>
               
               <div className="lg:col-span-5 relative min-h-[400px] bg-itot-teal/5 overflow-hidden">

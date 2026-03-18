@@ -18,7 +18,7 @@ import {
 } from 'lucide-react';
 
 interface SolutionsPageProps {
-  onNavigate: (page: 'home' | 'about' | 'solutions' | 'impact' | 'partnerships' | 'contact') => void;
+  onNavigate: (path: string) => void;
 }
 
 const SolutionsPage: React.FC<SolutionsPageProps> = ({ onNavigate }) => {
@@ -34,8 +34,8 @@ const SolutionsPage: React.FC<SolutionsPageProps> = ({ onNavigate }) => {
           />
         </div>
         <div className="max-w-7xl mx-auto relative z-10 text-center">
-          <h1 className="text-4xl md:text-6xl font-black text-white mb-6">Nos Solutions Stratégiques</h1>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed font-light">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-black text-white mb-6">Nos Solutions Stratégiques</h1>
+          <p className="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed font-light">
             Une offre structurée pour répondre aux défis complexes de la transformation numérique en Afrique, de l'individu à l'institution.
           </p>
         </div>
@@ -52,7 +52,7 @@ const SolutionsPage: React.FC<SolutionsPageProps> = ({ onNavigate }) => {
                 <Sparkles size={14} className="animate-pulse" />
                 Innovation Technologique
               </div>
-              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-8 leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-slate-900 mb-8 leading-tight">
                 L’écosystème <span className="text-itot-teal">Okademy</span>.
               </h2>
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">
@@ -62,12 +62,17 @@ const SolutionsPage: React.FC<SolutionsPageProps> = ({ onNavigate }) => {
                 Nous construisons un outil propriétaire augmenté par l'Intelligence Artificielle pour garantir une progression réelle, personnalisée et centrée sur l'employabilité.
               </p>
               <div className="flex flex-wrap gap-4">
-                <button className="flex items-center gap-2 px-8 py-4 bg-itot-teal text-white font-bold rounded-xl hover:bg-teal-700 transition-all shadow-lg shadow-teal-900/10 group">
+                <a 
+                  href="https://www.okademy.africa" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-8 py-4 bg-itot-teal text-white font-bold rounded-xl hover:bg-teal-700 transition-all shadow-lg shadow-teal-900/10 group"
+                >
                   Découvrir Okademy
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </button>
+                </a>
                 <button 
-                  onClick={() => onNavigate('contact')}
+                  onClick={() => onNavigate('/contact')}
                   className="flex items-center gap-2 px-8 py-4 bg-white border border-slate-200 text-slate-700 font-bold rounded-xl hover:bg-slate-50 transition-all"
                 >
                   Explorer nos outils
@@ -147,7 +152,7 @@ const SolutionsPage: React.FC<SolutionsPageProps> = ({ onNavigate }) => {
                 <GraduationCap size={14} />
                 Capital Humain
               </div>
-              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-8 leading-tight">Développement de compétences qui mènent à l'emploi</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-slate-900 mb-8 leading-tight">Développement de compétences qui mènent à l'emploi</h2>
               <p className="text-lg text-slate-600 mb-8 leading-relaxed">
                 Le marché ne cherche pas des diplômes. Il cherche des gens capables de résoudre des problèmes. Nous formons les talents aux technologies les plus demandées en intégrant les réalités concrètes du marché de l'emploi en RDC et en Afrique.
               </p>
@@ -169,7 +174,7 @@ const SolutionsPage: React.FC<SolutionsPageProps> = ({ onNavigate }) => {
               </div>
 
               <button 
-                onClick={() => onNavigate('contact')}
+                onClick={() => onNavigate('/contact')}
                 className="flex items-center gap-2 px-8 py-4 bg-itot-teal text-white font-bold rounded-xl hover:bg-teal-700 transition-all group"
               >
                 Découvrir les programmes
@@ -203,7 +208,7 @@ const SolutionsPage: React.FC<SolutionsPageProps> = ({ onNavigate }) => {
                 <Code2 size={14} />
                 Expertise technique
               </div>
-              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-8 leading-tight">Consulting & Transformation digitale</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-slate-900 mb-8 leading-tight">Consulting & Transformation digitale</h2>
               <p className="text-lg text-slate-600 mb-8 leading-relaxed">
                 Nous accompagnons les entreprises et les PME dans leur transformation numérique avec une présence terrain et une compréhension profonde du contexte local.
               </p>
@@ -222,7 +227,7 @@ const SolutionsPage: React.FC<SolutionsPageProps> = ({ onNavigate }) => {
               </div>
 
               <button 
-                onClick={() => onNavigate('contact')}
+                onClick={() => onNavigate('/contact')}
                 className="flex items-center gap-2 px-8 py-4 bg-slate-900 text-white font-bold rounded-xl hover:bg-slate-800 transition-all group"
               >
                 Voir comment nous accompagnons
@@ -256,7 +261,7 @@ const SolutionsPage: React.FC<SolutionsPageProps> = ({ onNavigate }) => {
               <Handshake size={14} />
               Partenariats
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">Projets à impact pour institutions et bailleurs</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-slate-900 mb-6">Projets à impact pour institutions et bailleurs</h2>
             <p className="text-lg text-slate-600">
               Nous concevons et exécutons des programmes de formation et d'insertion professionnelle pour le compte d'institutions publiques, de bailleurs de fonds et d'organisations à impact social, avec une exigence de résultats mesurables.
             </p>
@@ -281,7 +286,7 @@ const SolutionsPage: React.FC<SolutionsPageProps> = ({ onNavigate }) => {
           </div>
 
           <button 
-            onClick={() => onNavigate('contact')}
+            onClick={() => onNavigate('/contact')}
             className="inline-flex items-center gap-2 px-10 py-5 border-2 border-itot-teal text-itot-teal font-bold rounded-xl hover:bg-itot-teal hover:text-white transition-all group"
           >
             Discuter d'un partenariat

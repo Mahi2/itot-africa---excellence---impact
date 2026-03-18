@@ -16,6 +16,15 @@ import {
 const ContactPage: React.FC = () => {
   const [selectedProfile, setSelectedProfile] = useState<string | null>(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+  });
 
   const profiles = [
     { id: 'talent', label: 'Talent / Particulier', icon: <User />, desc: 'Pour la formation' },
@@ -24,9 +33,40 @@ const ContactPage: React.FC = () => {
     { id: 'partner', label: 'ONG / Bailleur', icon: <HeartHandshake />, desc: 'Pour l\'impact' }
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
+    setIsLoading(true);
+    setError(null);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          profile: selectedProfile
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setIsSubmitted(true);
+      } else {
+        setError(data.error || "Une erreur est survenue lors de l'envoi.");
+      }
+    } catch (err) {
+      setError("Impossible de contacter le serveur. Veuillez réessayer plus tard.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -38,11 +78,11 @@ const ContactPage: React.FC = () => {
         </div>
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-7xl font-black text-white mb-6 leading-tight tracking-tighter">
+            <h1 className="text-3xl sm:text-4xl md:text-7xl font-black text-white mb-6 leading-tight tracking-tighter">
               Parlons de votre <br />
               <span className="text-itot-teal">prochain impact.</span>
             </h1>
-            <p className="text-xl text-slate-400 font-light leading-relaxed">
+            <p className="text-lg md:text-xl text-slate-400 font-light leading-relaxed">
               Que vous souhaitiez transformer votre carrière ou numériser une institution, notre équipe est prête à vous accompagner.
             </p>
           </div>
@@ -63,13 +103,13 @@ const ContactPage: React.FC = () => {
                       <label className="block text-sm font-black text-slate-900 uppercase tracking-widest mb-6">
                         1. Quel est votre profil ?
                       </label>
-                      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
                         {profiles.map((profile) => (
                           <button
                             key={profile.id}
                             type="button"
                             onClick={() => setSelectedProfile(profile.id)}
-                            className={`p-6 rounded-3xl border-2 transition-all text-left flex flex-col justify-between h-full group ${
+                            className={`p-4 md:p-6 rounded-3xl border-2 transition-all text-left flex flex-col justify-between h-full group ${
                               selectedProfile === profile.id 
                                 ? 'border-itot-teal bg-teal-50 shadow-lg shadow-teal-100' 
                                 : 'border-slate-50 bg-slate-50 hover:border-slate-200'
@@ -100,7 +140,10 @@ const ContactPage: React.FC = () => {
                         <input 
                           required
                           type="text" 
-                          placeholder="Jean Dupont"
+                          name="fullName"
+                          value={formData.fullName}
+                          onChange={handleInputChange}
+                          placeholder="ex: Netka Kasongo..."
                           className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-itot-teal/20 focus:border-itot-teal transition-all"
                         />
                       </div>
@@ -109,31 +152,70 @@ const ContactPage: React.FC = () => {
                         <input 
                           required
                           type="email" 
+                          name="email"
+                          value={formData.email}
+                          onChange={handleInputChange}
                           placeholder="jean@exemple.com"
                           className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-itot-teal/20 focus:border-itot-teal transition-all"
                         />
                       </div>
                     </div>
 
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                      <div>
+                        <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">Numéro de téléphone</label>
+                        <input 
+                          required
+                          type="tel" 
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handleInputChange}
+                          placeholder="+243 978 400 415"
+                          className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-itot-teal/20 focus:border-itot-teal transition-all"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">Sujet / Projet</label>
+                        <input 
+                          required
+                          type="text" 
+                          name="subject"
+                          value={formData.subject}
+                          onChange={handleInputChange}
+                          placeholder="Développement d'une plateforme e-learning"
+                          className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-itot-teal/20 focus:border-itot-teal transition-all"
+                        />
+                      </div>
+                    </div>
+
                     <div className="mb-10">
-                      <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">Votre message / Projet</label>
+                      <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">Votre message / Détails</label>
                       <textarea 
                         required
+                        name="message"
+                        value={formData.message}
+                        onChange={handleInputChange}
                         rows={5}
                         placeholder="Dites-nous comment nous pouvons vous aider..."
                         className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-itot-teal/20 focus:border-itot-teal transition-all resize-none"
                       ></textarea>
                     </div>
 
+                    {error && (
+                      <div className="mb-6 p-4 bg-red-50 border border-red-100 text-red-600 rounded-2xl text-sm font-medium">
+                        {error}
+                      </div>
+                    )}
+
                     <button 
                       type="submit"
-                      disabled={!selectedProfile}
+                      disabled={!selectedProfile || isLoading}
                       className={`w-full py-5 rounded-2xl font-black text-white flex items-center justify-center gap-3 transition-all shadow-xl ${
-                        selectedProfile ? 'bg-itot-teal hover:bg-[#004D40] shadow-teal-200' : 'bg-slate-200 cursor-not-allowed'
+                        selectedProfile && !isLoading ? 'bg-itot-teal hover:bg-[#004D40] shadow-teal-200' : 'bg-slate-200 cursor-not-allowed'
                       }`}
                     >
-                      Envoyer ma demande
-                      <Send size={18} />
+                      {isLoading ? 'Envoi en cours...' : 'Envoyer ma demande'}
+                      {isLoading ? <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" /> : <Send size={18} />}
                     </button>
                   </form>
                 ) : (
@@ -176,7 +258,7 @@ const ContactPage: React.FC = () => {
                     </div>
                     <div>
                       <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1">Téléphone</div>
-                      <div className="font-medium">+243 000 000 000</div>
+                      <a href="https://wa.me/243978400415" target="_blank" rel="noopener noreferrer" className="font-medium hover:text-itot-teal transition-colors">+243 978 400 415</a>
                     </div>
                   </div>
                 </div>
@@ -202,10 +284,15 @@ const ContactPage: React.FC = () => {
                 <p className="text-teal-50/80 text-sm mb-8 leading-relaxed relative z-10">
                   Accédez directement à nos programmes de formation sur la plateforme Okademy.
                 </p>
-                <button className="flex items-center gap-3 bg-white text-itot-teal font-black text-sm px-6 py-4 rounded-2xl hover:bg-teal-50 transition-all relative z-10">
+                <a 
+                  href="https://www.okademy.africa" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 bg-white text-itot-teal font-black text-sm px-6 py-4 rounded-2xl hover:bg-teal-50 transition-all relative z-10 w-fit"
+                >
                   Accéder à Okademy
                   <ArrowRight size={16} />
-                </button>
+                </a>
               </div>
             </div>
 

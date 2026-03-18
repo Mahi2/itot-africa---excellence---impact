@@ -46,7 +46,7 @@ const ProblemSection: React.FC = () => {
             <div className="h-[1px] w-12 bg-itot-teal"></div>
             <span className="text-itot-teal font-black text-xs uppercase tracking-[0.3em]">L'Audit du Marché</span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-black text-white leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-black text-white leading-tight">
             Le Paradoxe <span className="text-slate-500">Africain.</span>
           </h2>
         </div>

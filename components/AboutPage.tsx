@@ -67,10 +67,10 @@ const AboutPage: React.FC = () => {
           <div className="max-w-3xl">
             <div className="w-12 h-1 bg-itot-teal mb-6"></div>
             <h4 className="text-teal-400 font-bold tracking-widest uppercase text-sm mb-4">À propos de Itot Africa</h4>
-            <h1 className="text-4xl md:text-6xl font-black text-white leading-tight mb-8">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-black text-white leading-tight mb-8">
               L'écosystème de formation, de certification et d'insertion <span className="text-itot-teal bg-white/10 px-2 inline-block backdrop-blur-sm">digitale</span> en Afrique.
             </h1>
-            <p className="text-xl md:text-2xl text-slate-200 leading-relaxed font-light">
+            <p className="text-lg md:text-2xl text-slate-200 leading-relaxed font-light">
               Bien plus qu'un prestataire de services, nous sommes le partenaire d'exécution qui transforme le potentiel brut du continent en compétences certifiées, en emplois concrets et en intelligence de marché actionnable.
             </p>
           </div>
@@ -99,22 +99,22 @@ const AboutPage: React.FC = () => {
             <div className="lg:w-1/2 w-full">
               <div className="relative p-1 bg-white rounded-3xl shadow-2xl border border-slate-100">
                  {/* Visual schema representation */}
-                 <div className="p-8 md:p-12 text-center">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                 <div className="p-6 md:p-12 text-center">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-8">
                       <div className="p-6 bg-slate-50 rounded-xl flex flex-col items-center gap-3">
                         <Users className="text-itot-teal w-10 h-10" />
                         <h4 className="font-bold text-slate-900">Capital Humain</h4>
-                        <p className="text-xs text-slate-500 uppercase tracking-widest">Formation certifiante & insertion professionnelle</p>
+                        <p className="text-[10px] text-slate-500 uppercase tracking-widest">Formation certifiante & insertion professionnelle</p>
                       </div>
                       <div className="p-6 bg-slate-50 rounded-xl flex flex-col items-center gap-3">
                         <Cpu className="text-itot-teal w-10 h-10" />
                         <h4 className="font-bold text-slate-900">Intelligence</h4>
-                        <p className="text-xs text-slate-500 uppercase tracking-widest">Recherche, données de marché & aide à la décision</p>
+                        <p className="text-[10px] text-slate-500 uppercase tracking-widest">Recherche, données de marché & aide à la décision</p>
                       </div>
-                      <div className="md:col-span-2 p-6 bg-itot-teal text-white rounded-xl shadow-lg transform hover:scale-[1.02] transition-transform">
+                      <div className="sm:col-span-2 p-6 bg-itot-teal text-white rounded-xl shadow-lg transform hover:scale-[1.02] transition-transform">
                         <Layers className="w-8 h-8 mx-auto mb-2" />
-                        <h4 className="font-bold text-xl uppercase tracking-widest">ITOT AFRICA</h4>
-                        <p className="text-sm text-teal-100">Le pont entre le potentiel et l'emploi</p>
+                        <h4 className="font-bold text-lg md:text-xl uppercase tracking-widest">ITOT AFRICA</h4>
+                        <p className="text-xs md:text-sm text-teal-100">Le pont entre le potentiel et l'emploi</p>
                       </div>
                     </div>
                  </div>
