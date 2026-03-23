@@ -1,46 +1,36 @@
 
 import React, { useState } from 'react';
 import { Users, Building2, Landmark, ArrowRight, CheckCircle2, Zap } from 'lucide-react';
+import { useTranslation } from '../contexts/LanguageContext';
 
 const ResponseSection: React.FC = () => {
+  const { t } = useTranslation();
   const [activePillar, setActivePillar] = useState(0);
 
   const pillars = [
     {
-      title: "Former et certifier les talents",
-      subtitle: "Capital Humain",
-      desc: "Nous formons et certifions les talents africains avec des standards internationaux pour les rendre compétitifs sur le marché mondial.",
-      details: [
-        "Certifications internationales (AWS, Cisco, etc.)",
-        "Accompagnement à l'insertion professionnelle",
-        "Parcours de formation alignés sur les besoins réels du marché"
-      ],
+      title: t('response.pillars.0.title'),
+      subtitle: t('response.pillars.0.subtitle'),
+      desc: t('response.pillars.0.desc'),
+      details: t('response.pillars.0.details', { returnObjects: true }) as string[],
       icon: <Users className="w-8 h-8" />,
       color: "from-teal-500/20 to-teal-500/5",
       accent: "#00796B"
     },
     {
-      title: "Propulser les entreprises",
-      subtitle: "Secteur Privé",
-      desc: "Nous agissons comme le partenaire technique des entreprises pour accélérer leur transformation digitale et former leurs équipes.",
-      details: [
-        "Formations sur mesure pour les entreprises",
-        "Consulting en transformation digitale",
-        "Accès à un vivier de talents certifiés"
-      ],
+      title: t('response.pillars.1.title'),
+      subtitle: t('response.pillars.1.subtitle'),
+      desc: t('response.pillars.1.desc'),
+      details: t('response.pillars.1.details', { returnObjects: true }) as string[],
       icon: <Building2 className="w-8 h-8" />,
       color: "from-blue-500/20 to-blue-500/5",
       accent: "#3b82f6"
     },
     {
-      title: "Exécuter des projets à impact",
-      subtitle: "Institutions & Bailleurs",
-      desc: "Nous concevons et délivrons des programmes de formation à impact social mesurable, avec un suivi rigoureux des résultats.",
-      details: [
-        "Conception et exécution de programme de formation",
-        "Suivi d'impact post-formation (Impact Tracker)",
-        "Intelligence de marché sur les compétences"
-      ],
+      title: t('response.pillars.2.title'),
+      subtitle: t('response.pillars.2.subtitle'),
+      desc: t('response.pillars.2.desc'),
+      details: t('response.pillars.2.details', { returnObjects: true }) as string[],
       icon: <Landmark className="w-8 h-8" />,
       color: "from-purple-500/20 to-purple-500/5",
       accent: "#a855f7"
@@ -61,15 +51,15 @@ const ResponseSection: React.FC = () => {
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-6">
               <Zap className="text-itot-teal animate-pulse" size={20} />
-              <span className="text-itot-teal font-black text-xs uppercase tracking-[0.4em]">Levier Opérationnel, notre approche :</span>
+              <span className="text-itot-teal font-black text-xs uppercase tracking-[0.4em]">{t('response.badge')}</span>
             </div>
             <h2 className="text-5xl md:text-7xl font-black text-white leading-[0.9] tracking-tighter">
-              Un écosystème <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-200 to-slate-500">en trois dimensions.</span>
+              {t('response.title')} <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-200 to-slate-500">{t('response.titleAccent')}</span>
             </h2>
           </div>
           <p className="text-slate-400 max-w-sm text-lg leading-relaxed font-light border-l border-white/10 pl-8">
-            Nous ne nous contentons pas de répondre au marché. Nous le structurons par la formation certifiante, l'intelligence de marché et l'insertion vérifiable.
+            {t('response.desc')}
           </p>
         </div>
 
@@ -129,7 +119,7 @@ const ResponseSection: React.FC = () => {
 
                 <div className="mt-8">
                   <button className="flex items-center gap-3 text-white font-bold group/btn">
-                    <span>Explorer la solution</span>
+                    <span>{t('response.cta')}</span>
                     <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover/btn:bg-white group-hover/btn:text-slate-950 transition-all">
                       <ArrowRight size={18} />
                     </div>
@@ -155,18 +145,18 @@ const ResponseSection: React.FC = () => {
                  <div className="absolute inset-0 flex items-center justify-center text-itot-teal font-black text-xs">Itot Africa</div>
               </div>
               <div>
-                <h4 className="text-white font-bold text-xl mb-1">Convergence</h4>
+                <h4 className="text-white font-bold text-xl mb-1">{t('response.convergence')}</h4>
                 <p className="text-slate-500 max-w-md text-sm leading-relaxed">
-                  Itot Africa opère simultanément sur ces trois leviers pour créer un cycle vertueux : la recherche éclaire les formations, les formations produisent des talents certifiés, les talents servent les entreprises et les institutions, et les données d'impact renforcent la crédibilité de l'ensemble.
+                  {t('response.convergenceDesc')}
                 </p>
               </div>
            </div>
            <div className="mt-8 md:mt-0 flex gap-4">
               <div className="px-6 py-3 rounded-full bg-white/5 border border-white/10 text-slate-400 text-xs font-bold uppercase tracking-widest">
-                Impact Local
+                {t('response.impactLocal')}
               </div>
               <div className="px-6 py-3 rounded-full bg-white/5 border border-white/10 text-slate-400 text-xs font-bold uppercase tracking-widest">
-                Standard Global
+                {t('response.standardGlobal')}
               </div>
            </div>
         </div>

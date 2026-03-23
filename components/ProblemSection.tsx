@@ -1,38 +1,40 @@
 
 import React, { useState } from 'react';
 import { Users, Target, Zap, BarChart3, ArrowUpRight } from 'lucide-react';
+import { useTranslation } from '../contexts/LanguageContext';
 
 const ProblemSection: React.FC = () => {
+  const { t } = useTranslation();
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const points = [
     {
       id: "01",
-      title: "Le Gisement Invisible",
-      desc: "Des millions de jeunes talents possèdent un potentiel brut exceptionnel, mais restent invisibles sur le marché mondial faute de certifications reconnues et d'expérience sur des projets concrets.",
+      title: t('problem.point1.title'),
+      desc: t('problem.point1.desc'),
       icon: <Users className="w-6 h-6" />,
-      category: "Capital Humain"
+      category: t('problem.point1.category')
     },
     {
       id: "02",
-      title: "L'Ecart de Livraison",
-      desc: "Les institutions et les bailleurs ont la vision et les budgets, mais peinent à trouver des partenaires techniques locaux capables de livrer des projets complexes aux standards internationaux.",
+      title: t('problem.point2.title'),
+      desc: t('problem.point2.desc'),
       icon: <Target className="w-6 h-6" />,
-      category: "CAPACITE D'EXECUTION"
+      category: t('problem.point2.category')
     },
     {
       id: "03",
-      title: "Le Décalage Formation-Marché",
-      desc: "Le marché de l'emploi exige des compétences digitales pratiques et actualisées, là où les systèmes éducatifs classiques proposent encore de la théorie déconnectée du terrain.",
+      title: t('problem.point3.title'),
+      desc: t('problem.point3.desc'),
       icon: <Zap className="w-6 h-6" />,
-      category: "COMPETENCES"
+      category: t('problem.point3.category')
     },
     {
       id: "04",
-      title: "Impact Non Mésuré",
-      desc: "Sans suivi post-formation et sans données fiables sur l'insertion professionnelle, les investissements dans la formation s'évaporent sans laisser de trace vérifiable.",
+      title: t('problem.point4.title'),
+      desc: t('problem.point4.desc'),
       icon: <BarChart3 className="w-6 h-6" />,
-      category: "IMPACT"
+      category: t('problem.point4.category')
     }
   ];
 
@@ -44,10 +46,10 @@ const ProblemSection: React.FC = () => {
         <div className="mb-20">
           <div className="flex items-center gap-4 mb-4">
             <div className="h-[1px] w-12 bg-itot-teal"></div>
-            <span className="text-itot-teal font-black text-xs uppercase tracking-[0.3em]">L'Audit du Marché</span>
+            <span className="text-itot-teal font-black text-xs uppercase tracking-[0.3em]">{t('problem.badge')}</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-black text-white leading-tight">
-            Le Paradoxe <span className="text-slate-500">Africain.</span>
+            {t('problem.title')}<span className="text-slate-500">{t('problem.titleAccent')}</span>
           </h2>
         </div>
 
@@ -85,7 +87,7 @@ const ProblemSection: React.FC = () => {
               </div>
 
               <div className="relative z-10 pt-8 flex items-center gap-2 text-itot-teal font-bold text-sm opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                Comprendre le défi
+                {t('problem.cta')}
                 <ArrowUpRight size={18} />
               </div>
 
@@ -98,10 +100,10 @@ const ProblemSection: React.FC = () => {
         {/* Bottom Insight */}
         <div className="mt-16 flex flex-col md:flex-row items-center justify-between gap-8 p-8 rounded-2xl bg-white/[0.02] border border-white/5">
           <p className="text-slate-500 text-sm max-w-2xl">
-            Ce constat n'est pas une fatalité. C'est le point de départ de notre mission. Itot Africa a été bâtie pour résoudre ces quatre ruptures par un écosystème intégré de formation, de certification et d'insertion.
+            {t('problem.insight')}
           </p>
           <div className="flex items-center gap-4">
-            <span className="text-[10px] font-black text-itot-teal uppercase tracking-[0.3em] rotate-180 [writing-mode:vertical-lr]">Mission</span>
+            <span className="text-[10px] font-black text-itot-teal uppercase tracking-[0.3em] rotate-180 [writing-mode:vertical-lr]">{t('problem.mission')}</span>
           </div>
         </div>
       </div>

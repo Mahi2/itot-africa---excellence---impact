@@ -1,7 +1,9 @@
 
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
-import { Menu, X, Globe } from 'lucide-react';
+import { Menu, X, Globe, ChevronDown } from 'lucide-react';
+import { useTranslation } from '../contexts/LanguageContext';
+import { Language } from '../i18n/translations';
 
 interface NavbarProps {
   onNavigate: (path: string) => void;
@@ -10,6 +12,8 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLangOpen, setIsLangOpen] = useState(false);
+  const { language, setLanguage, t } = useTranslation();
   const location = useLocation();
 
   useEffect(() => {
@@ -22,15 +26,25 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
 
   const handleLinkClick = () => {
     setIsMenuOpen(false);
+    setIsLangOpen(false);
   };
 
   const navLinks = [
-    { id: 'home', path: '/', label: 'Accueil' },
-    { id: 'about', path: '/about', label: 'À Propos' },
-    { id: 'solutions', path: '/solutions', label: 'Solutions' },
-    { id: 'impact', path: '/impact', label: 'Impact' },
-    { id: 'partnerships', path: '/partnerships', label: 'Partenariats' },
-    { id: 'contact', path: '/contact', label: 'Contact' }
+    { id: 'home', path: '/', label: t('nav.home') },
+    { id: 'about', path: '/about', label: t('nav.about') },
+    { id: 'solutions', path: '/solutions', label: t('nav.solutions') },
+    { id: 'impact', path: '/impact', label: t('nav.impact') },
+    { id: 'partnerships', path: '/partnerships', label: t('nav.partnerships') },
+    { id: 'contact', path: '/contact', label: t('nav.contact') }
+  ];
+
+  const languages: { code: Language; label: string; flag: string }[] = [
+    { code: 'fr', label: 'Français', flag: '🇫🇷' },
+    { code: 'en', label: 'English', flag: '🇺🇸' },
+    { code: 'ln', label: 'Lingala', flag: '🇨🇩' },
+    { code: 'sw', label: 'Swahili', flag: '🇹🇿' },
+    { code: 'es', label: 'Español', flag: '🇪🇸' },
+    { code: 'de', label: 'Deutsch', flag: '🇩🇪' },
   ];
 
   return (
@@ -57,7 +71,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
         </Link>
 
         {/* Desktop Links */}
-        <div className="hidden lg:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-4 xl:gap-6">
           {navLinks.map((item) => (
             <NavLink 
               key={item.id}
@@ -65,11 +79,11 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
               end={item.path === '/'}
               onClick={handleLinkClick}
               className={({ isActive }) => `
-                font-bold transition-all relative py-2 px-4 rounded-xl
+                font-bold transition-all relative py-2 px-2 xl:px-3 rounded-xl text-xs xl:text-sm
                 ${isScrolled ? 'text-slate-700' : 'text-white'}
                 ${isActive ? 'text-itot-teal bg-itot-teal/10' : 'hover:text-itot-teal hover:bg-itot-teal/5'}
                 ${isActive 
-                  ? 'after:content-[""] after:absolute after:bottom-1 after:left-4 after:right-4 after:h-1 after:bg-itot-teal after:rounded-full' 
+                  ? 'after:content-[""] after:absolute after:bottom-1 after:left-2 xl:after:left-3 after:right-2 xl:after:right-3 after:h-1 after:bg-itot-teal after:rounded-full' 
                   : 'after:content-[""] after:absolute after:bottom-1 after:left-1/2 after:w-0 after:h-1 after:bg-itot-teal after:transition-all after:-translate-x-1/2 hover:after:w-1/2'
                 }
               `}
@@ -77,26 +91,60 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
               {item.label}
             </NavLink>
           ))}
-          <Link 
-            to="/contact"
-            onClick={handleLinkClick}
-            className="px-6 py-2 bg-itot-teal text-white font-semibold rounded-lg hover:bg-[#004D40] transition-all shadow-lg shadow-teal-900/10"
-          >
-            Nous rejoindre
-          </Link>
+          {/* Language Switcher */}
+          <div className="relative ml-1 xl:ml-2">
+            <button 
+              onClick={() => setIsLangOpen(!isLangOpen)}
+              className={`flex items-center gap-2 px-3 py-2 rounded-xl transition-all ${
+                isScrolled ? 'text-slate-700 hover:bg-slate-100' : 'text-white hover:bg-white/10'
+              }`}
+            >
+              <Globe size={18} />
+              <span className="uppercase font-bold text-sm">{language}</span>
+              <ChevronDown size={14} className={`transition-transform ${isLangOpen ? 'rotate-180' : ''}`} />
+            </button>
+
+            {isLangOpen && (
+              <div className="absolute top-full right-0 mt-2 w-48 bg-white rounded-2xl shadow-2xl border border-slate-100 py-2 overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+                {languages.map((lang) => (
+                  <button
+                    key={lang.code}
+                    onClick={() => {
+                      setLanguage(lang.code);
+                      setIsLangOpen(false);
+                    }}
+                    className={`w-full flex items-center gap-3 px-4 py-3 text-left transition-colors ${
+                      language === lang.code ? 'bg-teal-50 text-itot-teal font-bold' : 'text-slate-700 hover:bg-slate-50'
+                    }`}
+                  >
+                    <span className="text-xl">{lang.flag}</span>
+                    <span className="text-sm">{lang.label}</span>
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
 
         {/* Mobile Toggle */}
-        <button 
-          className="lg:hidden"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          {isMenuOpen ? (
-            <X className={isScrolled ? 'text-itot-teal' : 'text-white'} size={28} />
-          ) : (
-            <Menu className={isScrolled ? 'text-itot-teal' : 'text-white'} size={28} />
-          )}
-        </button>
+        <div className="flex items-center gap-4 lg:hidden">
+          <button 
+            onClick={() => setIsLangOpen(!isLangOpen)}
+            className={`flex items-center gap-1 px-2 py-1 rounded-lg ${isScrolled ? 'text-itot-teal' : 'text-white'}`}
+          >
+            <Globe size={20} />
+            <span className="uppercase font-bold text-xs">{language}</span>
+          </button>
+          <button 
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? (
+              <X className={isScrolled ? 'text-itot-teal' : 'text-white'} size={28} />
+            ) : (
+              <Menu className={isScrolled ? 'text-itot-teal' : 'text-white'} size={28} />
+            )}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -121,13 +169,27 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
               )}
             </NavLink>
           ))}
-          <Link 
-            to="/contact"
-            onClick={handleLinkClick}
-            className="w-full py-4 bg-itot-teal text-white text-center font-bold rounded-xl"
-          >
-            Nous rejoindre
-          </Link>
+        </div>
+      )}
+
+      {/* Mobile Language Selector */}
+      {isLangOpen && (
+        <div className="lg:hidden absolute top-full left-0 right-0 bg-white border-t border-slate-100 shadow-2xl py-4 px-6 grid grid-cols-2 gap-3 animate-in slide-in-from-top-4 duration-300">
+          {languages.map((lang) => (
+            <button
+              key={lang.code}
+              onClick={() => {
+                setLanguage(lang.code);
+                setIsLangOpen(false);
+              }}
+              className={`flex items-center gap-3 p-3 rounded-xl border transition-all ${
+                language === lang.code ? 'border-itot-teal bg-teal-50 text-itot-teal font-bold' : 'border-slate-100 text-slate-700'
+              }`}
+            >
+              <span className="text-xl">{lang.flag}</span>
+              <span className="text-sm">{lang.label}</span>
+            </button>
+          ))}
         </div>
       )}
     </nav>

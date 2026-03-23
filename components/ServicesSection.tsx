@@ -1,12 +1,14 @@
 
 import React from 'react';
 import { ArrowUpRight, GraduationCap, Code2, Globe, Activity, ShieldCheck, Zap, Layers, Target, BarChart3 } from 'lucide-react';
+import { useTranslation } from '../contexts/LanguageContext';
 
 interface ServicesSectionProps {
   onNavigate: (path: string) => void;
 }
 
 const ServicesSection: React.FC<ServicesSectionProps> = ({ onNavigate }) => {
+  const { t } = useTranslation();
   const handleGoToSolutions = (e: React.MouseEvent) => {
     e.preventDefault();
     onNavigate('/solutions');
@@ -28,25 +30,25 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ onNavigate }) => {
         <div className="mb-24">
           <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-white/5 text-teal-400 text-[10px] font-bold uppercase tracking-[0.3em] mb-8 border border-white/10 backdrop-blur-sm">
             <Activity size={14} />
-            04 — Nos produits
+            {t('services.badge')}
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
             <div>
-              <h2 className="text-4xl sm:text-6xl md:text-8xl font-black text-white leading-[0.85] tracking-tighter mb-8">
-                L'écosystème <br />
-                <span className="text-itot-teal">en action.</span>
+              <h2 className="text-4xl sm:text-6xl md:text-8xl font-black text-white leading-tight tracking-tighter mb-8">
+                {t('services.title')} <br />
+                <span className="text-itot-teal">{t('services.titleAccent')}</span>
               </h2>
             </div>
             <div className="max-w-xl">
               <p className="text-slate-400 text-xl font-light leading-relaxed mb-8">
-                Nous transformons des objectifs complexes en résultats tangibles grâce à trois pôles d'expertise intégrés
+                {t('services.desc')}
               </p>
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full border border-dashed border-white/20 flex items-center justify-center relative">
                   <div className="absolute inset-0 border-t border-itot-teal rounded-full animate-spin"></div>
                   <Zap size={14} className="text-itot-teal" />
                 </div>
-                <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Cycle de Valeur</span>
+                <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest">{t('services.cycle')}</span>
               </div>
             </div>
           </div>
@@ -61,21 +63,21 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ onNavigate }) => {
               <div className="lg:col-span-7 p-12 md:p-16 flex flex-col">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-itot-teal text-white text-[10px] font-black uppercase tracking-widest mb-10 w-fit">
                   <GraduationCap size={14} />
-                  Moteur de talents
+                  {t('services.okademy.badge')}
                 </div>
-                <h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-8 tracking-tight">Okademy : Le moteur de talents</h3>
+                <h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-8 tracking-tight">{t('services.okademy.title')}</h3>
                 <p className="text-slate-400 text-lg font-light leading-relaxed mb-12 max-w-xl">
-                  Formation intensive et certification en compétences numériques de niveau international pour les futurs professionnels du continent.
+                  {t('services.okademy.desc')}
                 </p>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
                   <div className="p-6 rounded-3xl bg-white/5 border border-white/5 hover:border-white/10 transition-colors">
                     <div className="text-3xl font-black text-itot-teal mb-1">+10.7k</div>
-                    <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Apprenants</div>
+                    <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">{t('services.okademy.learners')}</div>
                   </div>
                   <div className="p-6 rounded-3xl bg-white/5 border border-white/5 hover:border-white/10 transition-colors">
-                    <div className="text-xl font-bold text-white mb-1">Certifications</div>
-                    <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">AWS, Cisco, etc.</div>
+                    <div className="text-xl font-bold text-white mb-1">{t('services.okademy.certifications')}</div>
+                    <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">{t('services.okademy.certificationsDesc')}</div>
                   </div>
                 </div>
 
@@ -85,7 +87,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ onNavigate }) => {
                   rel="noopener noreferrer"
                   className="group/btn flex items-center gap-4 text-white font-black text-sm w-fit"
                 >
-                  <span className="border-b-2 border-itot-teal pb-1 group-hover/btn:border-white transition-all">Explorer le catalogue Okademy</span>
+                  <span className="border-b-2 border-itot-teal pb-1 group-hover/btn:border-white transition-all">{t('services.okademy.cta')}</span>
                   <div className="w-12 h-12 rounded-full bg-itot-teal text-white flex items-center justify-center group-hover/btn:scale-110 group-hover/btn:rotate-45 transition-all shadow-xl shadow-itot-teal/20">
                     <ArrowUpRight size={20} />
                   </div>
@@ -117,13 +119,13 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ onNavigate }) => {
                 <div className="w-14 h-14 bg-itot-teal/10 border border-itot-teal/20 rounded-2xl flex items-center justify-center text-itot-teal mb-10 group-hover:scale-110 transition-transform">
                   <Code2 size={28} />
                 </div>
-                <h3 className="text-3xl font-black text-white mb-6">Open Intelligence : L'éclaireur</h3>
+                <h3 className="text-3xl font-black text-white mb-6">{t('services.intelligence.title')}</h3>
                 <p className="text-slate-400 text-base leading-relaxed font-light mb-10">
-                  Recherche, veille de marché et production de données fiables sur les compétences et l'emploi digital en Afrique pour éclairer les décisions de formation, de recrutement et d'investissement.
+                  {t('services.intelligence.desc')}
                 </p>
                 <div className="flex items-center gap-4 text-itot-teal text-xs font-bold uppercase tracking-widest">
                   <BarChart3 size={16} />
-                  Data-Driven Insights
+                  {t('services.intelligence.insight')}
                 </div>
               </div>
               {/* Subtle background glow */}
@@ -136,19 +138,19 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ onNavigate }) => {
                 <div className="w-14 h-14 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-900 mb-10 group-hover:bg-itot-teal group-hover:text-white transition-all">
                   <Layers size={28} />
                 </div>
-                <h3 className="text-3xl font-black text-slate-900 mb-6">Conseil & Exécution de projets</h3>
+                <h3 className="text-3xl font-black text-slate-900 mb-6">{t('services.consulting.title')}</h3>
                 <p className="text-slate-500 text-base leading-relaxed font-light mb-10">
-                  Conception et délivrance de programmes de formation, consulting en transformation digitale, et accompagnement stratégique pour entreprises et institutions. Partenaire de confiance
+                  {t('services.consulting.desc')}
                 </p>
                 
                 <div className="mt-auto grid grid-cols-2 gap-4">
                   <div className="flex items-center gap-3 p-4 rounded-2xl bg-slate-50 border border-slate-100 group-hover:bg-white transition-colors">
                     <ShieldCheck size={20} className="text-itot-teal" />
-                    <span className="text-[9px] font-bold text-slate-600 uppercase tracking-widest leading-tight">Partenaire de Confiance</span>
+                    <span className="text-[9px] font-bold text-slate-600 uppercase tracking-widest leading-tight">{t('services.consulting.partner')}</span>
                   </div>
                   <div className="flex items-center gap-3 p-4 rounded-2xl bg-slate-50 border border-slate-100 group-hover:bg-white transition-colors">
                     <Activity size={20} className="text-itot-teal" />
-                    <span className="text-[9px] font-bold text-slate-600 uppercase tracking-widest leading-tight">Reporting d'Impact Temps Réel</span>
+                    <span className="text-[9px] font-bold text-slate-600 uppercase tracking-widest leading-tight">{t('services.consulting.reporting')}</span>
                   </div>
                 </div>
               </div>

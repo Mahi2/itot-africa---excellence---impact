@@ -1,12 +1,15 @@
 
 import React from 'react';
 import { ArrowRight, Users, Building2 } from 'lucide-react';
+import { useTranslation } from '../contexts/LanguageContext';
 
 interface HeroProps {
   onNavigate: (path: string) => void;
 }
 
 const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
+  const { t } = useTranslation();
+
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Background Image with Overlay */}
@@ -30,15 +33,15 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-teal-500"></span>
             </span>
-            Bâtir le capital humain de l'Afrique digitale
+            {t('hero.badge')}
           </div>
           
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6 drop-shadow-2xl">
-            De la formation certifiante à <span className="text-itot-teal bg-white px-2 inline-block">l'emploi concret.</span>
+            {t('hero.title')}
           </h1>
           
           <p className="text-lg md:text-2xl text-white font-medium mb-10 leading-relaxed max-w-2xl drop-shadow-md">
-            Itot Africa est l'écosystème qui relie les talents, les entreprises et les institutions aux compétences réelles et aux opportunités durables de croissance.
+            {t('hero.subtitle')}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
@@ -47,7 +50,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
               className="group flex items-center justify-center gap-3 px-8 py-5 bg-itot-teal text-white rounded-xl font-bold text-lg hover:bg-teal-600 transition-all shadow-2xl shadow-teal-950/40"
             >
               <Users className="w-5 h-5" />
-              Je suis un particulier
+              {t('hero.cta.individual')}
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             <button 
@@ -55,7 +58,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
               className="flex items-center justify-center gap-3 px-8 py-5 bg-white/10 backdrop-blur-md border border-white/30 text-white rounded-xl font-bold text-lg hover:bg-white/20 transition-all"
             >
               <Building2 className="w-5 h-5" />
-              Je représente une organisation
+              {t('hero.cta.organization')}
             </button>
           </div>
 
@@ -77,7 +80,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
               ))}
             </div>
             <div className="text-white/60 text-sm">
-              <span className="text-white font-bold block text-base">+10 700 apprenants formés | 200+ emplois générés | 30+ partenaires entreprises</span>
+              <span className="text-white font-bold block text-base">{t('hero.stats')}</span>
             </div>
           </div>
         </div>

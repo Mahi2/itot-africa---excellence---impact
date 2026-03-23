@@ -4,6 +4,7 @@ import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import { 
   ArrowRight, 
 } from 'lucide-react';
+import { LanguageProvider, useTranslation } from './contexts/LanguageContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ProblemSection from './components/ProblemSection';
@@ -20,48 +21,60 @@ import LegalNoticePage from './components/LegalNoticePage';
 import PrivacyPolicyPage from './components/PrivacyPolicyPage';
 import SEO from './components/SEO';
 
-const HomePage: React.FC<{ navigateTo: (path: string) => void }> = ({ navigateTo }) => (
-  <>
-    <SEO title="Accueil" />
-    <Hero onNavigate={navigateTo} />
-    <ProblemSection />
-    <ResponseSection />
-    <ServicesSection onNavigate={navigateTo} />
-    <PersonaSection onNavigate={navigateTo} />
-    
-    {/* Final CTA Section */}
-    <section className="bg-itot-teal py-20 px-6">
-      <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
-          Prêt à bâtir l'infrastructure de demain ?
-        </h2>
-        <p className="text-xl text-teal-50 mb-10 opacity-90">
-          Que vous soyez un talent en devenir ou une organisation visionnaire, 
-          votre impact commence ici.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button 
-            onClick={() => navigateTo('/contact')}
-            className="px-8 py-4 bg-white text-itot-teal font-bold rounded-lg shadow-xl hover:bg-teal-50 transition-all flex items-center justify-center gap-2 group"
-          >
-            Contactez notre équipe
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </button>
-          <button 
-            onClick={() => navigateTo('/about')}
-            className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-all"
-          >
-            En savoir plus sur nous
-          </button>
+const HomePage: React.FC<{ navigateTo: (path: string) => void }> = ({ navigateTo }) => {
+  const { t } = useTranslation();
+  
+  return (
+    <>
+      <SEO title={t('nav.home')} />
+      <Hero onNavigate={navigateTo} />
+      <ProblemSection />
+      <ResponseSection />
+      <ServicesSection onNavigate={navigateTo} />
+      <PersonaSection onNavigate={navigateTo} />
+      
+      {/* Final CTA Section */}
+      <section className="bg-itot-teal py-20 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
+            {t('hero.cta.primary')}
+          </h2>
+          <p className="text-xl text-teal-50 mb-10 opacity-90">
+            {t('hero.subtitle')}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button 
+              onClick={() => navigateTo('/contact')}
+              className="px-8 py-4 bg-white text-itot-teal font-bold rounded-lg shadow-xl hover:bg-teal-50 transition-all flex items-center justify-center gap-2 group"
+            >
+              {t('nav.contact')}
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </button>
+            <button 
+              onClick={() => navigateTo('/about')}
+              className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-all"
+            >
+              {t('nav.about')}
+            </button>
+          </div>
         </div>
-      </div>
-    </section>
-  </>
-);
+      </section>
+    </>
+  );
+};
 
 const App: React.FC = () => {
+  return (
+    <LanguageProvider>
+      <AppContent />
+    </LanguageProvider>
+  );
+};
+
+const AppContent: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const { t } = useTranslation();
 
   // Scroll to top when path changes
   useEffect(() => {
@@ -84,43 +97,43 @@ const App: React.FC = () => {
           <Route path="/home" element={<HomePage navigateTo={navigateTo} />} />
           <Route path="/about" element={
             <>
-              <SEO title="À Propos" />
+              <SEO title={t('nav.about')} />
               <AboutPage />
             </>
           } />
           <Route path="/solutions" element={
             <>
-              <SEO title="Solutions" />
+              <SEO title={t('nav.solutions')} />
               <SolutionsPage onNavigate={navigateTo} />
             </>
           } />
           <Route path="/impact" element={
             <>
-              <SEO title="Impact" />
+              <SEO title={t('nav.impact')} />
               <ImpactPage />
             </>
           } />
           <Route path="/partnerships" element={
             <>
-              <SEO title="Partenariats" />
+              <SEO title={t('nav.partnerships')} />
               <PartnershipsPage onNavigate={navigateTo} />
             </>
           } />
           <Route path="/contact" element={
             <>
-              <SEO title="Contact" />
+              <SEO title={t('nav.contact')} />
               <ContactPage />
             </>
           } />
           <Route path="/legal" element={
             <>
-              <SEO title="Mentions Légales" />
+              <SEO title={t('footer.legal.notice')} />
               <LegalNoticePage />
             </>
           } />
           <Route path="/privacy" element={
             <>
-              <SEO title="Confidentialité" />
+              <SEO title={t('footer.legal.privacy')} />
               <PrivacyPolicyPage />
             </>
           } />
