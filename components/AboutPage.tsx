@@ -222,19 +222,6 @@ const AboutPage: React.FC = () => {
               </div>
             ))}
           </div>
-
-          <div className="mt-24 p-12 bg-slate-50 rounded-[40px] border border-slate-100 flex flex-col lg:flex-row items-center justify-between gap-10">
-             <div className="max-w-2xl">
-                <h4 className="text-2xl font-bold text-slate-900 mb-4">Le moteur de vos projets</h4>
-                <p className="text-slate-600 leading-relaxed">
-                  Cette équipe est le levier opérationnel qui permet à Itot Africa de transformer des programmes de formation en résultats concrets : des apprenants certifiés, des talents insérés, des entreprises renforcées.
-                </p>
-             </div>
-             <button className="flex items-center gap-3 px-8 py-4 bg-slate-900 text-white font-black rounded-2xl hover:bg-itot-teal transition-all group shrink-0">
-               Rejoindre l'équipe
-               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-             </button>
-          </div>
         </div>
       </section>
 
@@ -277,6 +264,61 @@ const AboutPage: React.FC = () => {
               </div>
               <h4 className="text-xl font-bold text-slate-900 mb-3">Apprentissage permanent</h4>
               <p className="text-slate-500">Nous sommes une entreprise de formation. Si nous-mêmes cessons d'apprendre, nous perdons notre légitimité. Chaque erreur est une leçon documentée. Chaque projet livré fait l'objet d'un retour d'expérience.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. PITCH DECK SECTION */}
+      <section className="py-24 px-6 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-slate-900 rounded-[40px] p-8 md:p-16 relative overflow-hidden">
+            {/* Decorative background */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-itot-teal/10 blur-[80px] rounded-full -mr-32 -mt-32"></div>
+            
+            <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
+              <div className="max-w-2xl">
+                <h2 className="text-3xl md:text-5xl font-black text-white mb-6">
+                  Prêt à découvrir notre <span className="text-itot-teal">vision complète ?</span>
+                </h2>
+                <p className="text-slate-400 text-lg leading-relaxed mb-8">
+                  Téléchargez notre Pitch Deck pour comprendre en profondeur notre modèle d'impact, nos chiffres clés et notre stratégie de déploiement à l'échelle continentale.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <a 
+                    href="https://drive.google.com/file/d/1T0aKLJoRTL9TlZm1sYuB-2h2yl175_y-/view?usp=sharing" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 px-6 py-4 bg-white text-slate-900 font-bold rounded-2xl hover:bg-itot-teal hover:text-white transition-all group"
+                  >
+                    Pitch Deck (Français)
+                    <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                  </a>
+                  <a 
+                    href="https://drive.google.com/file/d/1iApCuXKobVAXU-hKNGjD_kWA7jqRruZA/view?usp=sharing" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 px-6 py-4 bg-slate-800 text-white font-bold rounded-2xl hover:bg-white hover:text-slate-900 transition-all group border border-slate-700"
+                  >
+                    Pitch Deck (English)
+                    <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                  </a>
+                </div>
+              </div>
+              
+              <div className="hidden lg:block shrink-0">
+                <div className="w-48 h-64 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-sm flex items-center justify-center relative group">
+                   <div className="absolute inset-0 bg-itot-teal/20 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
+                   <div className="flex flex-col items-center gap-4">
+                      <div className="w-16 h-20 bg-itot-teal rounded-lg shadow-lg flex items-center justify-center">
+                         <div className="w-8 h-1 bg-white/30 mb-1"></div>
+                         <div className="w-8 h-1 bg-white/30 mb-1"></div>
+                         <div className="w-4 h-1 bg-white/30"></div>
+                      </div>
+                      <span className="text-white/40 font-black text-[10px] uppercase tracking-widest">Pitch Deck 2024</span>
+                   </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

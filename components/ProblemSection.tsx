@@ -86,10 +86,15 @@ const ProblemSection: React.FC = () => {
                 </p>
               </div>
 
-              <div className="relative z-10 pt-8 flex items-center gap-2 text-itot-teal font-bold text-sm opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+              <a 
+                href="https://drive.google.com/file/d/1-I0sbwcwqG7v21uixHw3qA-nMMJE2L0m/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative z-10 pt-8 flex items-center gap-2 text-itot-teal font-bold text-sm opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 hover:underline"
+              >
                 {t('problem.cta')}
                 <ArrowUpRight size={18} />
-              </div>
+              </a>
 
               {/* Hover Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-itot-teal/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>

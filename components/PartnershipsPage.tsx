@@ -166,12 +166,19 @@ const PartnershipsPage: React.FC<PartnershipsPageProps> = ({ onNavigate }) => {
       <section className="py-24 px-6 bg-white">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-xs font-black text-slate-300 uppercase tracking-[0.5em] mb-16">Organisations qui nous font confiance</h2>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-12 items-center opacity-30 grayscale">
-            {[1,2,3,4,5,6,7,8,9,10].map(i => (
-              <div key={i} className="flex justify-center h-8 w-full border-b border-slate-100 items-end pb-4 font-black text-[10px] tracking-widest text-slate-400 uppercase">
-                 Partner_{i}
-              </div>
-            ))}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+             {[
+               "Enabel", "GIZ", "Ecobank", "Rawbank", 
+               "FEC", "PNUD", "Orange", "Vodacom"
+             ].map((name, i) => (
+               <div key={i} className="flex justify-center transition-all cursor-pointer group">
+                  <div className="h-20 w-full bg-white rounded-2xl flex items-center justify-center p-6 border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
+                     <span className="text-slate-400 font-black text-[10px] md:text-xs uppercase tracking-[0.3em] group-hover:text-itot-teal transition-colors text-center">
+                       {name}
+                     </span>
+                  </div>
+               </div>
+             ))}
           </div>
         </div>
       </section>
@@ -194,16 +201,13 @@ const PartnershipsPage: React.FC<PartnershipsPageProps> = ({ onNavigate }) => {
               <p className="text-xl text-slate-500 max-w-2xl mb-12 font-light leading-relaxed">
                 Prêt à co-créer une solution technologique durable ou à transformer l'employabilité d'une génération ? Notre équipe stratégique vous répond sous 48h.
               </p>
-              <div className="flex flex-col sm:flex-row gap-6">
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <button 
                   onClick={() => onNavigate('/contact')}
                   className="px-10 py-5 bg-itot-teal text-white font-black rounded-2xl shadow-2xl shadow-itot-teal/20 hover:bg-[#004D40] transition-all flex items-center gap-3"
                 >
                   Initier une collaboration
                   <ArrowRight size={20} />
-                </button>
-                <button className="px-10 py-5 bg-white border border-slate-200 text-slate-900 font-black rounded-2xl hover:bg-slate-50 transition-all">
-                  Consulter notre brochure
                 </button>
               </div>
             </div>

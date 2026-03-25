@@ -46,7 +46,7 @@ const PersonaSection: React.FC<PersonaSectionProps> = ({ onNavigate }) => {
             title="Particuliers"
             description="Lancez votre carrière dans le numérique avec une formation certifiante, un accompagnement concret et un accès direct aux opportunités d'emploi."
             cta="Démarrer ma formation"
-            onClick={() => onNavigate('/contact')}
+            onClick={() => window.open('https://okademy.africa', '_blank')}
           />
           <PersonaCard 
             icon={<Building className="w-8 h-8" />}

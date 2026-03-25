@@ -3,11 +3,13 @@ import nodemailer from "nodemailer";
 import cors from "cors";
 import dotenv from "dotenv";
 import path from "path";
+import fs from "fs";
 import { createServer as createViteServer } from "vite";
 
 dotenv.config();
 
 async function startServer() {
+  console.log("Starting server initialization...");
   const app = express();
   const PORT = 3000;
 
@@ -99,7 +101,8 @@ async function startServer() {
     }
   });
 
-  // SMTP Verification on startup
+  // SMTP Verification on startup - Removed to avoid potential hangs
+  /*
   const smtpHost = process.env.SMTP_HOST?.trim();
   const smtpUser = process.env.SMTP_USER?.trim();
   const smtpPass = process.env.SMTP_PASS?.trim();
@@ -121,14 +124,40 @@ async function startServer() {
   } else {
     console.warn("SMTP is NOT configured. Emails will be simulated in console.");
   }
+  */
 
   // Vite middleware for development
   if (process.env.NODE_ENV !== "production") {
+    console.log("Initializing Vite dev server...");
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: "spa",
     });
+    console.log("Vite dev server initialized.");
     app.use(vite.middlewares);
+    
+    // Fallback for SPA routing in development
+    app.get("*", async (req, res, next) => {
+      if (req.originalUrl.startsWith('/api')) return next();
+      
+      const url = req.originalUrl;
+      console.log(`Handling SPA request for: ${url}`);
+      try {
+        const templatePath = path.resolve(process.cwd(), "index.html");
+        if (!fs.existsSync(templatePath)) {
+          console.error("index.html not found at", templatePath);
+          return res.status(404).send("index.html not found");
+        }
+        
+        let template = fs.readFileSync(templatePath, "utf-8");
+        template = await vite.transformIndexHtml(url, template);
+        res.status(200).set({ "Content-Type": "text/html" }).end(template);
+      } catch (e) {
+        console.error("Error in SPA fallback:", e);
+        vite.ssrFixStacktrace(e as Error);
+        next(e);
+      }
+    });
   } else {
     const distPath = path.join(process.cwd(), "dist");
     app.use(express.static(distPath));

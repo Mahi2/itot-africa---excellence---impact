@@ -632,12 +632,12 @@ export const translations: Translation = {
     de: 'WIRKUNG'
   },
   'problem.cta': {
-    fr: 'Comprendre le défi',
-    en: 'Understand the challenge',
-    ln: 'Sosola mokakatano',
-    sw: 'Eleza changamoto',
-    es: 'Comprender el desafío',
-    de: 'Die Herausforderung verstehen'
+    fr: 'Explorer notre étude',
+    en: 'Explore our study',
+    ln: 'Tala boyekoli na biso',
+    sw: 'Gundua utafiti wetu',
+    es: 'Explorar nuestro estudio',
+    de: 'Unsere Studie erkunden'
   },
   'problem.insight': {
     fr: 'Ce constat n\'est pas une fatalité. C\'est le point de départ de notre mission. Itot Africa a été bâtie pour résoudre ces quatre ruptures par un écosystème intégré de formation, de certification et d\'insertion.',
@@ -691,7 +691,7 @@ export const personaTranslations = {
           ]
         }
       ],
-      cta: "Explorer la solution",
+      cta: "En savoir plus",
       convergence: "Convergence",
       convergenceDesc: "Itot Africa opère simultanément sur ces trois leviers pour créer un cycle vertueux : la recherche éclaire les formations, les formations produisent des talents certifiés, les talents servent les entreprises et les institutions, et les données d'impact renforcent la crédibilité de l'ensemble.",
       impactLocal: "Impact Local",
@@ -764,7 +764,7 @@ export const personaTranslations = {
           ]
         }
       ],
-      cta: "Explore the solution",
+      cta: "Learn more",
       convergence: "Convergence",
       convergenceDesc: "Itot Africa operates simultaneously on these three levers to create a virtuous cycle: research informs training, training produces certified talents, talents serve companies and institutions, and impact data strengthens the overall credibility.",
       impactLocal: "Local Impact",

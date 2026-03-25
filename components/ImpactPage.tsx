@@ -106,10 +106,15 @@ const ImpactPage: React.FC = () => {
                 Découvrez comment nos interventions transforment les défis technologiques en opportunités de croissance.
               </p>
             </div>
-            <button className="flex items-center gap-2 font-bold text-itot-teal hover:gap-3 transition-all">
-              Voir tous les projets
+            <a 
+              href="https://docs.google.com/document/d/1OlToRS3FJp3CgKOBtGhfvBqX1tkynJvz1MDqNBf87CI/edit?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 font-bold text-itot-teal hover:gap-3 transition-all"
+            >
+              Explorer notre rapport d'impact
               <ArrowUpRight size={20} />
-            </button>
+            </a>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -172,35 +177,16 @@ const ImpactPage: React.FC = () => {
             <p className="text-slate-500">Des institutions internationales, gouvernements et leaders de l'industrie.</p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-12 items-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
              {[
-               { name: "Enabel", logo: "https://logo.clearbit.com/enabel.be" },
-               { name: "GIZ", logo: "https://logo.clearbit.com/giz.de" },
-               { name: "Ecobank", logo: "https://logo.clearbit.com/ecobank.com" },
-               { name: "Rawbank", logo: "https://logo.clearbit.com/rawbank.com" },
-               { name: "FEC", logo: "https://logo.clearbit.com/fec-rdc.com" },
-               { name: "PNUD", logo: "https://logo.clearbit.com/undp.org" }
-             ].map((partner, i) => (
+               "Enabel", "GIZ", "Ecobank", "Rawbank", 
+               "FEC", "PNUD", "Orange", "Vodacom"
+             ].map((name, i) => (
                <div key={i} className="flex justify-center transition-all cursor-pointer group">
-                  <div className="h-24 w-full bg-white rounded-2xl flex items-center justify-center p-6 border border-slate-100 shadow-sm group-hover:shadow-md group-hover:-translate-y-1 transition-all">
-                     <img 
-                       src={partner.logo} 
-                       alt={partner.name} 
-                       className="max-h-full max-w-full object-contain opacity-70 group-hover:opacity-100 transition-opacity"
-                       referrerPolicy="no-referrer"
-                       onError={(e) => {
-                         // Fallback to a text-based logo if the image fails to load
-                         const target = e.target as HTMLImageElement;
-                         target.style.display = 'none';
-                         const parent = target.parentElement;
-                         if (parent) {
-                           const span = document.createElement('span');
-                           span.className = 'text-slate-400 font-bold text-xs uppercase tracking-widest';
-                           span.innerText = partner.name;
-                           parent.appendChild(span);
-                         }
-                       }}
-                     />
+                  <div className="h-20 w-full bg-white rounded-2xl flex items-center justify-center p-6 border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
+                     <span className="text-slate-400 font-black text-sm md:text-base uppercase tracking-[0.2em] group-hover:text-itot-teal transition-colors text-center">
+                       {name}
+                     </span>
                   </div>
                </div>
              ))}

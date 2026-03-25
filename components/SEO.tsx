@@ -12,18 +12,20 @@ interface SEOProps {
 
 const SEO: React.FC<SEOProps> = ({ 
   title, 
-  description = "De la formation certifiante à l'emploi concret. Itot Africa est l'écosystème qui relie les talents, les entreprises et les institutions aux compétences réelles et aux opportunités durables de croissance.",
+  description = "Itot Africa est l'écosystème leader en RDC reliant talents, entreprises et institutions aux compétences réelles. Formation certifiante, recrutement et transformation digitale.",
   canonical,
   ogType = 'website',
-  ogImage = 'https://itot.africa/og-image.jpg' // Placeholder
+  ogImage = 'https://itotafrica.netlify.app/img/logoblack.png'
 }) => {
-  const siteTitle = "Itot Africa | Infrastructure Humaine & Digitale";
+  const siteTitle = "Itot Africa | Delaformation certifiante à l'emploi concret.";
   const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
+  const keywords = "Itot Africa, Itot, ITOT, formation professionnelle RDC, recrutement talents Afrique, transformation digitale, infrastructure humaine, employabilité, Lubumbashi, Kinshasa, tech Africa";
 
   return (
     <Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
       
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={ogType} />
