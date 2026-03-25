@@ -131,15 +131,20 @@ async function startServer() {
     console.log("Initializing Vite dev server...");
     const vite = await createViteServer({
       server: { middlewareMode: true },
-      appType: "spa",
+      appType: "custom", // Use custom to handle HTML transformation manually
     });
     console.log("Vite dev server initialized.");
     app.use(vite.middlewares);
     
     // Fallback for SPA routing in development
     app.get("*", async (req, res, next) => {
+      // If it's an API request, let it fall through
       if (req.originalUrl.startsWith('/api')) return next();
       
+      // If the request is for a file (has an extension), let it fall through
+      // This is important because Vite middleware should handle static assets
+      if (path.extname(req.originalUrl)) return next();
+
       const url = req.originalUrl;
       console.log(`Handling SPA request for: ${url}`);
       try {
@@ -150,8 +155,9 @@ async function startServer() {
         }
         
         let template = fs.readFileSync(templatePath, "utf-8");
+        // Use the actual URL for transformation
         template = await vite.transformIndexHtml(url, template);
-        res.status(200).set({ "Content-Type": "text/html" }).end(template);
+        res.status(200).set({ "Content-Type": "text/html" }).send(template);
       } catch (e) {
         console.error("Error in SPA fallback:", e);
         vite.ssrFixStacktrace(e as Error);
