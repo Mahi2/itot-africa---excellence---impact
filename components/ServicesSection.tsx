@@ -34,7 +34,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ onNavigate }) => {
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
             <div>
-              <h2 className="text-4xl sm:text-6xl md:text-8xl font-black text-white leading-tight tracking-tighter mb-8">
+              <h2 className="text-4xl sm:text-6xl md:text-8xl font-black text-white leading-[0.85] tracking-tighter mb-8">
                 {t('services.title')} <br />
                 <span className="text-itot-teal">{t('services.titleAccent')}</span>
               </h2>

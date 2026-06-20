@@ -63,7 +63,7 @@ const SolutionsPage: React.FC<SolutionsPageProps> = ({ onNavigate }) => {
               </p>
               <div className="flex flex-wrap gap-4">
                 <a 
-                  href="https://okademy.africa" 
+                  href="https://www.okademy.africa" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-8 py-4 bg-itot-teal text-white font-bold rounded-xl hover:bg-teal-700 transition-all shadow-lg shadow-teal-900/10 group"
@@ -173,15 +173,13 @@ const SolutionsPage: React.FC<SolutionsPageProps> = ({ onNavigate }) => {
                 ))}
               </div>
 
-              <a 
-                href="https://drive.google.com/file/d/1c0F6lA47yV-jnHWGqVM8TIcT93LQ7kBM/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-8 py-4 bg-itot-teal text-white font-bold rounded-xl hover:bg-teal-700 transition-all group w-fit"
+              <button 
+                onClick={() => onNavigate('/contact')}
+                className="flex items-center gap-2 px-8 py-4 bg-itot-teal text-white font-bold rounded-xl hover:bg-teal-700 transition-all group"
               >
-                Explorer notre catalogue
+                Découvrir les programmes
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </a>
+              </button>
             </div>
             
             <div className="lg:w-1/2">

@@ -35,6 +35,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
     { id: 'solutions', path: '/solutions', label: t('nav.solutions') },
     { id: 'impact', path: '/impact', label: t('nav.impact') },
     { id: 'partnerships', path: '/partnerships', label: t('nav.partnerships') },
+    { id: 'visite', path: '/visite-rawbank', label: 'Itinéraire Visite RawBank' },
     { id: 'contact', path: '/contact', label: t('nav.contact') }
   ];
 
@@ -71,7 +72,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
         </Link>
 
         {/* Desktop Links */}
-        <div className="hidden lg:flex items-center gap-4 xl:gap-6">
+        <div className="hidden lg:flex items-center gap-8">
           {navLinks.map((item) => (
             <NavLink 
               key={item.id}
@@ -79,11 +80,11 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
               end={item.path === '/'}
               onClick={handleLinkClick}
               className={({ isActive }) => `
-                font-bold transition-all relative py-2 px-2 xl:px-3 rounded-xl text-xs xl:text-sm
+                font-bold transition-all relative py-2 px-4 rounded-xl
                 ${isScrolled ? 'text-slate-700' : 'text-white'}
                 ${isActive ? 'text-itot-teal bg-itot-teal/10' : 'hover:text-itot-teal hover:bg-itot-teal/5'}
                 ${isActive 
-                  ? 'after:content-[""] after:absolute after:bottom-1 after:left-2 xl:after:left-3 after:right-2 xl:after:right-3 after:h-1 after:bg-itot-teal after:rounded-full' 
+                  ? 'after:content-[""] after:absolute after:bottom-1 after:left-4 after:right-4 after:h-1 after:bg-itot-teal after:rounded-full' 
                   : 'after:content-[""] after:absolute after:bottom-1 after:left-1/2 after:w-0 after:h-1 after:bg-itot-teal after:transition-all after:-translate-x-1/2 hover:after:w-1/2'
                 }
               `}
@@ -92,7 +93,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
             </NavLink>
           ))}
           {/* Language Switcher */}
-          <div className="relative ml-1 xl:ml-2">
+          <div className="relative">
             <button 
               onClick={() => setIsLangOpen(!isLangOpen)}
               className={`flex items-center gap-2 px-3 py-2 rounded-xl transition-all ${
@@ -124,6 +125,14 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
               </div>
             )}
           </div>
+
+          <Link 
+            to="/contact"
+            onClick={handleLinkClick}
+            className="px-6 py-2 bg-itot-teal text-white font-semibold rounded-lg hover:bg-[#004D40] transition-all shadow-lg shadow-teal-900/10"
+          >
+            {t('nav.cta')}
+          </Link>
         </div>
 
         {/* Mobile Toggle */}
@@ -169,6 +178,13 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
               )}
             </NavLink>
           ))}
+          <Link 
+            to="/contact"
+            onClick={handleLinkClick}
+            className="w-full py-4 bg-itot-teal text-white text-center font-bold rounded-xl"
+          >
+            {t('nav.cta')}
+          </Link>
         </div>
       )}
 

@@ -63,6 +63,19 @@ const HomePage: React.FC<{ navigateTo: (path: string) => void }> = ({ navigateTo
   );
 };
 
+const VisiteRawBankPage: React.FC = () => {
+  return (
+    <div className="w-full h-[calc(100vh-4rem)] md:h-[calc(100vh-5rem)] pt-16 md:pt-20 relative bg-slate-50">
+      <SEO title="Itinéraire Visite RawBank" />
+      <iframe 
+        src="/itineraire-visite-rawbank.html" 
+        title="Itinéraire Visite RawBank" 
+        className="w-full h-full border-none shadow-inner"
+      />
+    </div>
+  );
+};
+
 const App: React.FC = () => {
   return (
     <LanguageProvider>
@@ -137,6 +150,7 @@ const AppContent: React.FC = () => {
               <PrivacyPolicyPage />
             </>
           } />
+          <Route path="/visite-rawbank" element={<VisiteRawBankPage />} />
         </Routes>
       </main>
 
